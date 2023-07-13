@@ -1,0 +1,43 @@
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.link {
+	padding-bottom: 2rem;
+	text-decoration: none;
+	font-size: 2rem;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	text-align: center;
+}
+
+.link {
+	text-decoration: none;
+	color: var(--dark-theme-text-white);
+}
+
+.link:hover,
+.link:focus {
+	color: var(--accent-blue);
+}
+
+.closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 3.4rem;
+	margin-left: 50px;
+	background-color: inherit;
+	color: inherit;
+	border: none;
+}

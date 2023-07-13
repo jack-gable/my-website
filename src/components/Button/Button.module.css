@@ -1,0 +1,29 @@
+.btn {
+	background: var(--accent-blue);
+	color: var(--dark-theme-text-white);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: inline-block;
+	border-radius: 5px;
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s;
+	padding: 0.6rem 1.6rem;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+.btn:first-child {
+	margin-right: 20px;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+}
+
+@media screen and (max-width: 500px) {
+	.btn:first-child {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
