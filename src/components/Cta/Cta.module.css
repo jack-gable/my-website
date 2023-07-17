@@ -1,0 +1,43 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 90rem;
+	padding-top: 4rem;
+}
+
+.info {
+	margin: 3rem auto 0 auto;
+	max-width: 55rem;
+}
+
+.text {
+	font-size: 1.6rem;
+	text-align: center;
+	width: 100%;
+	line-height: 1.6;
+}
+
+.name {
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	color: var(--accent-blue);
+}
+
+.cta {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+	.text {
+		font-size: 1.4rem;
+	}
+
+	.name {
+		font-size: 3.2rem;
+	}
+}

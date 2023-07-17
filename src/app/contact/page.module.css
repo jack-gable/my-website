@@ -1,0 +1,135 @@
+.textZone {
+	position: absolute;
+	left: 10%;
+	top: 40%;
+	transform: translateY(-50%);
+	max-height: 90%;
+	width: 70%;
+}
+
+.title {
+	font-size: 53px;
+	color: var(--accent-blue);
+	margin-top: 0;
+	position: relative;
+	margin-bottom: 40px;
+	left: 10px;
+}
+
+.form {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.formList {
+	padding: 0;
+	margin: 0;
+}
+
+.listItem {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-bottom: 10px;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	border-radius: 10px;
+}
+
+.half {
+	width: 49%;
+	margin-left: 2%;
+	float: left;
+	clear: none;
+}
+
+.half:first-child {
+	margin-left: 0;
+}
+
+.nameInput {
+	width: 100%;
+	border: 0;
+	background: var(--accent-blue);
+	height: 50px;
+	font-size: 16px;
+	color: #eeeeee;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.nameInput::placeholder {
+	color: #eee;
+}
+
+.emailInput {
+	width: 100%;
+	border: 0;
+	background: var(--accent-blue);
+	height: 50px;
+	font-size: 16px;
+	color: #eee;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.emailInput::placeholder {
+	color: #eee;
+}
+
+.message {
+	width: 100%;
+	border: 0;
+	background: var(--accent-blue);
+	height: 200px;
+	font-size: 16px;
+	color: #eee;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	border-radius: 10px;
+	resize: none;
+}
+
+.message::placeholder {
+	color: #eee;
+}
+
+.subjectInput {
+	width: 100%;
+	border: 0;
+	background: var(--accent-blue);
+	height: 50px;
+	font-size: 16px;
+	color: #eee;
+	padding: 0 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.subjectInput::placeholder {
+	color: #eee;
+}
+
+.subjectItem {
+	list-style: none;
+}
+
+.flatbtn {
+	color: var(--accent-blue);
+	background: 0 0;
+	letter-spacing: 2px;
+	text-decoration: none;
+	padding: 8px 10px;
+	border: 2px solid var(--accent-blue);
+	float: right;
+	border-radius: 10px;
+	font-weight: 700;
+}
+
+.flatbtn:hover,
+.flat:focus {
+	color: #fff;
+	background-color: var(--accent-blue);
+}

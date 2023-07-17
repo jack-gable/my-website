@@ -1,6 +1,6 @@
 import "./globals.css";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 import { Source_Code_Pro } from "next/font/google";
 
 const source_code_pro = Source_Code_Pro({ subsets: ["latin"] });
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<Header />
+				<Sidebar />
 				{children}
 				<Footer />
 			</body>

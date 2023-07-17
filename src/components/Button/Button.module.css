@@ -18,7 +18,7 @@
 }
 
 .btn:hover {
-	transform: translateY(-3px);
+	transform: translateY(-3px) scale(1.1);
 }
 
 @media screen and (max-width: 500px) {
