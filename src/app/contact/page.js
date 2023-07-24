@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 export default function Contactpage() {
 	const formRef = React.useRef();
@@ -48,8 +49,42 @@ export default function Contactpage() {
 	return (
 		<>
 			<div className={styles.textZone}>
-				<h1 className={styles.title}>Contact Me</h1>
-				<p>Feel free to reach out to me!</p>
+				<motion.h1
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 0.3,
+						ease: "easeInOut",
+						scale: {
+							type: "spring",
+							damping: 10,
+							stiffness: 120,
+							restDelta: 0.001,
+						},
+					}}
+					className={styles.title}
+				>
+					Contact Me
+				</motion.h1>
+				<motion.p
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						delay: 0.1,
+						duration: 0.3,
+						ease: "easeInOut",
+						scale: {
+							type: "spring",
+							damping: 10,
+							stiffness: 120,
+							restDelta: 0.001,
+						},
+					}}
+					className={styles.text}
+				>
+					Please reach out to me if you have any questions! Shoot me a message
+					if you want to find out more about me or the projects I am working on.
+				</motion.p>
 				<div className={styles.form}>
 					<form ref={formRef} onSubmit={sendEmail}>
 						<ul className={styles.formList}>

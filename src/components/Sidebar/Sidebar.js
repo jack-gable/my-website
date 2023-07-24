@@ -9,6 +9,7 @@ import {
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Navigation from "../Navigation";
 
 export default function Sidebar() {
 	return (
@@ -16,24 +17,7 @@ export default function Sidebar() {
 			<Link className={styles.logo} href="/">
 				<div>JG</div>
 			</Link>
-			<nav className={styles.nav}>
-				<Link className={styles.link} href="/" activeclassname="active">
-					<FontAwesomeIcon className={styles.icon} icon={faHome} />
-					<div className={styles.navText}>HOME</div>
-				</Link>
-				<Link className={styles.link} href="/about">
-					<FontAwesomeIcon className={styles.icon} icon={faUser} />
-					<div className={styles.navText}>ABOUT</div>
-				</Link>
-				<Link className={styles.link} href="/projects">
-					<FontAwesomeIcon className={styles.icon} icon={faLaptopFile} />
-					<div className={styles.navText}>PROJECTS</div>
-				</Link>
-				<Link className={styles.link} href="/contact">
-					<FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
-					<div className={styles.navText}>CONTACT</div>
-				</Link>
-			</nav>
+			<Navigation />
 			<div>
 				<ul className={styles.list}>
 					<li>
@@ -43,7 +27,7 @@ export default function Sidebar() {
 							rel="noreferrer"
 							className={styles.listItem}
 						>
-							<FontAwesomeIcon icon={faLinkedin} />
+							<FontAwesomeIcon icon={faLinkedin} size="xl" />
 						</Link>
 					</li>
 					<li>
@@ -53,7 +37,7 @@ export default function Sidebar() {
 							rel="noreferrer"
 							className={styles.listItem}
 						>
-							<FontAwesomeIcon icon={faGithub} />
+							<FontAwesomeIcon icon={faGithub} size="xl" />
 						</Link>
 					</li>
 				</ul>

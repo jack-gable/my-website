@@ -1,5 +1,5 @@
-import "./globals.css";
 import Footer from "@/components/Footer";
+import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import { Source_Code_Pro } from "next/font/google";
 
@@ -14,9 +14,11 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<Sidebar />
-				{children}
-				<Footer />
+				<div className="wrapper">
+					<Sidebar />
+					{children}
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

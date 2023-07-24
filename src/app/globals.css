@@ -23,7 +23,9 @@
   3. Allow percentage-based heights in the application
 */
 html,
-body {
+body,
+#root,
+#__next {
 	height: 100%;
 }
 /*
@@ -75,4 +77,25 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background-image: linear-gradient(
+		115deg,
+		hsl(0deg 0% 9%) 0%,
+		hsl(344deg 0% 11%) 36%,
+		hsl(344deg 0% 13%) 51%,
+		hsl(344deg 0% 15%) 61%,
+		hsl(344deg 0% 17%) 68%,
+		hsl(344deg 0% 19%) 73%,
+		hsl(344deg 0% 21%) 77%,
+		hsl(344deg 0% 22%) 80%,
+		hsl(344deg 0% 23%) 83%,
+		hsl(344deg 0% 24%) 85%,
+		hsl(344deg 0% 25%) 89%,
+		hsl(0deg 0% 27%) 100%
+	);
 }
