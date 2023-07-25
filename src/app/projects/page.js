@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Button from "@/components/Button";
 import notesApp1 from "../../../public/assests/img/notes-app-1.png";
 import movieSearch1 from "../../../public/assests/img/movie-search-1.png";
-import movieSearch2 from "../../../public/assests/img/movie-search-2.png";
+import weatherApp1 from "../../../public/assests/img/weather-app-1.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -26,11 +26,11 @@ const PROJECTS = [
 		id: 2,
 	},
 	{
-		image: movieSearch2,
-		alt: "A movie search app",
-		title: "Movie Search App",
-		desc: "Movie Search is a simple movie lookup site that allows the user to find his/her favorite movies. It's built with functional React components.",
-		link: "https://lively-seahorse-d423ea.netlify.app/",
+		image: weatherApp1,
+		alt: "A weather app",
+		title: "MyWeather App",
+		desc: "MyWeather app is a weather application that shows the user the weather based on a city input. It's built with React functional components and utilizes the OpenWeatherMap API.",
+		link: "",
 		id: 3,
 	},
 ];
@@ -76,7 +76,9 @@ export default function Projectspage() {
 						Below are some projects that I&apos;ve built. Check them out on
 						Github or click the links to view the live versions.
 					</motion.p>
-					<Button href="https://github.com/jack-gable">View on Github</Button>
+					<Button href="https://github.com/jack-gable" target="_blank">
+						View on Github
+					</Button>
 				</div>
 			</div>
 			<div className={styles.projects}>
@@ -93,7 +95,9 @@ export default function Projectspage() {
 						<div className={styles.text}>
 							<h3>{title}</h3>
 							<p className={styles.desc}>{desc}</p>
-							<Button href={link}>See live version</Button>
+							<Button href={link} target="_blank">
+								See live version
+							</Button>
 						</div>
 					</div>
 				))}

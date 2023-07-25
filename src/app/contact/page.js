@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./page.module.css";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import Map from "@/components/Map";
 
 export default function Contactpage() {
 	const formRef = React.useRef();
@@ -85,53 +86,58 @@ export default function Contactpage() {
 					Please reach out to me if you have any questions! Shoot me a message
 					if you want to find out more about me or the projects I am working on.
 				</motion.p>
-				<div className={styles.form}>
-					<form ref={formRef} onSubmit={sendEmail}>
-						<ul className={styles.formList}>
-							<li className={`${styles.listItem} ${styles.half}`}>
-								<input
-									className={styles.nameInput}
-									type="text"
-									name="name"
-									placeholder="Name"
-									required
-								/>
-							</li>
-							<li className={`${styles.listItem} ${styles.half}`}>
-								<input
-									className={styles.emailInput}
-									type="email"
-									name="email"
-									placeholder="Email"
-									required
-								/>
-							</li>
-							<li className={styles.subjectItem}>
-								<input
-									className={styles.subjectInput}
-									placeholder="Subject"
-									type="text"
-									name="subject"
-									required
-								/>
-							</li>
-							<li className={styles.listItem}>
-								<textarea
-									className={styles.message}
-									placeholder="Message"
-									name="message"
-									required
-								></textarea>
-							</li>
-							<li className={styles.listItem}>
-								<button type="submit" className={styles.flatbtn}>
-									{status === "idle" && <p>SEND</p>}
-									{status === "loading" && <p>SENDING...</p>}
-									{status === "success" && <p>MESSAGE SENT!</p>}
-								</button>
-							</li>
-						</ul>
-					</form>
+				<div className={styles.container}>
+					<div className={styles.form}>
+						<form ref={formRef} onSubmit={sendEmail}>
+							<ul className={styles.formList}>
+								<li className={`${styles.listItem} ${styles.half}`}>
+									<input
+										className={styles.nameInput}
+										type="text"
+										name="name"
+										placeholder="Name"
+										required
+									/>
+								</li>
+								<li className={`${styles.listItem} ${styles.half}`}>
+									<input
+										className={styles.emailInput}
+										type="email"
+										name="email"
+										placeholder="Email"
+										required
+									/>
+								</li>
+								<li className={styles.subjectItem}>
+									<input
+										className={styles.subjectInput}
+										placeholder="Subject"
+										type="text"
+										name="subject"
+										required
+									/>
+								</li>
+								<li className={styles.listItem}>
+									<textarea
+										className={styles.message}
+										placeholder="Message"
+										name="message"
+										required
+									></textarea>
+								</li>
+								<li className={styles.listItem}>
+									<button type="submit" className={styles.flatbtn}>
+										{status === "idle" && <p>SEND</p>}
+										{status === "loading" && <p>SENDING...</p>}
+										{status === "success" && <p>MESSAGE SENT!</p>}
+									</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div>
+						<Map />
+					</div>
 				</div>
 			</div>
 		</>

@@ -24,12 +24,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 600px;
 }
 
 .formList {
 	padding: 0;
 	margin: 0;
-	width: 750px;
 }
 
 .listItem {
@@ -139,4 +139,9 @@
 .flat:focus {
 	color: #fff;
 	background-color: var(--accent-blue);
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
 }

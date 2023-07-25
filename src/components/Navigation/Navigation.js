@@ -47,7 +47,7 @@ const LINKS = [
 		label: "RESUME",
 		href: "/",
 		icon: faFilePdf,
-		target: "",
+		target: "_blank",
 	},
 ];
 
