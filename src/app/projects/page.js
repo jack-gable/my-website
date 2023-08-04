@@ -30,7 +30,7 @@ const PROJECTS = [
 		alt: "A weather app",
 		title: "MyWeather App",
 		desc: "MyWeather app is a weather application that shows the user the weather based on a city input. It's built with React functional components and utilizes the OpenWeatherMap API.",
-		link: "",
+		link: "https://tourmaline-sherbet-89e3c3.netlify.app/",
 		id: 3,
 	},
 ];

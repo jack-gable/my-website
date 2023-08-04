@@ -93,7 +93,7 @@ export default function Aboutpage() {
 						My background is in biology and computer science. I have a BSc in
 						Biology and a minor in CS from Sonoma State University. When
 						I&apos;m not coding, I like to play basketball with my friends or
-						weight-lifting.
+						I&apos;m weight-lifting.
 					</motion.p>
 					<Button href="/contact">Contact Me</Button>
 				</div>
