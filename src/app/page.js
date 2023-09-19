@@ -1,10 +1,11 @@
-import styles from "./page.module.css";
+import About from "@/components/About";
 import Cta from "@/components/Cta";
 
 export default function Home() {
 	return (
 		<main>
-			<Cta />
+			{/* <Cta />
+			<About /> */}
 		</main>
 	);
 }

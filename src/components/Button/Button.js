@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import styles from "@/components/Button/Button.module.css";
+import styled from "styled-components";
 
 export default function Button({ href, children, ...delegated }) {
 	return (
-		<Link href={href} className={styles.btn} {...delegated}>
+		<Link href={href} {...delegated}>
 			{children}
 		</Link>
 	);

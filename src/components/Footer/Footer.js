@@ -1,10 +1,22 @@
+"use client";
 import React from "react";
-import styles from "@/components/Footer/Footer.module.css";
+import styled from "styled-components";
 
 export default function Footer() {
 	return (
-		<footer className={styles.wrapper}>
+		<Wrapper>
 			<p>&copy; 2023 - Jack Gable</p>
-		</footer>
+		</Wrapper>
 	);
 }
+
+const Wrapper = styled.footer`
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	padding: 16px 0;
+`;

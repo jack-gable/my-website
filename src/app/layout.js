@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
-import "./globals.css";
-import Sidebar from "@/components/Sidebar";
+import GlobalStyles from "./Global";
+import Header from "@/components/Header";
 import { Source_Code_Pro } from "next/font/google";
 
 const source_code_pro = Source_Code_Pro({ subsets: ["latin"] });
@@ -14,12 +14,11 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<div className="wrapper">
-					<Sidebar />
-					{children}
-					<Footer />
-				</div>
+				<Header />
+				<div>{children}</div>
+				{/* <Footer /> */}
 			</body>
+			<GlobalStyles />
 		</html>
 	);
 }
