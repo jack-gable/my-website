@@ -5,21 +5,27 @@ import styled from "styled-components";
 
 export default function Cta() {
 	return (
-		<Wrapper>
-			<p>Hi, my name&apos;s</p>
-			<Title>Jack Gable</Title>
-			<h2>Web Developer | Front-End Engineer | React specialist</h2>
-			<ButtonWrapper>
-				<Button href="#contact">CONTACT ME</Button>
-			</ButtonWrapper>
-		</Wrapper>
+		<>
+			<Wrapper>
+				<div>
+					<p>Hi, my name&apos;s</p>
+					<Title>Jack Gable</Title>
+					<h2>Web Developer | Front-End Engineer</h2>
+					<ButtonWrapper>
+						<Button variant="fill" size="large" href="/contact">
+							CONTACT ME
+						</Button>
+					</ButtonWrapper>
+				</div>
+			</Wrapper>
+		</>
 	);
 }
 
 const Wrapper = styled.section`
-	height: 100%;
-	text-align: center;
-	padding: 2rem 1rem;
+	padding: 12rem 0;
+	display: grid;
+	place-content: center;
 `;
 
 const Title = styled.h1`
@@ -27,5 +33,7 @@ const Title = styled.h1`
 `;
 
 const ButtonWrapper = styled.div`
-	padding: 16px 0;
+	margin: 48px 0;
+	display: flex;
+	justify-content: center;
 `;

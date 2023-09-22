@@ -1,7 +1,7 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Circle } from "react-leaflet";
 import Head from "next/head";
 import Script from "next/script";
 
@@ -38,7 +38,7 @@ export default function WeatherMap() {
 			></Script>
 			<MapContainer
 				center={position}
-				zoom={13}
+				zoom={11}
 				style={{ width: 400, height: 500, margin: "0 auto", borderRadius: 10 }}
 				key={`${latitude}-${longitude}`}
 			>

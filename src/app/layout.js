@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
 import GlobalStyles from "./Global";
-import Header from "@/components/Header";
 import { Source_Code_Pro } from "next/font/google";
 
 const source_code_pro = Source_Code_Pro({ subsets: ["latin"] });
@@ -14,9 +12,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={source_code_pro.className}>
-				<Header />
-				<div>{children}</div>
-				{/* <Footer /> */}
+				<div style={{ height: "100%" }}>{children}</div>
 			</body>
 			<GlobalStyles />
 		</html>

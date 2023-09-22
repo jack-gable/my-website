@@ -15,46 +15,48 @@ import waves from "../../../public/assests/img/layered-waves-haikei.svg";
 
 export default function Header() {
 	return (
-		<Wrapper>
-			<Logo href="/">
-				<div>JG</div>
-			</Logo>
-			<nav>
-				<NavList>
-					<li>
-						<ListItem href="/">
-							<FontAwesomeIcon icon={faHome} size="lg" />
-							HOME
-						</ListItem>
-					</li>
-					<li>
-						<ListItem href="#about">
-							<FontAwesomeIcon icon={faUser} size="lg" />
-							ABOUT
-						</ListItem>
-					</li>
-					<li>
-						<ListItem href="#projects">
-							<FontAwesomeIcon icon={faLaptopFile} size="lg" />
-							PROJECTS
-						</ListItem>
-					</li>
-					<li>
-						<ListItem href="#contact">
-							<FontAwesomeIcon icon={faEnvelope} size="lg" />
-							CONTACT
-						</ListItem>
-					</li>
-					<li>
-						<ListItem href="/">
-							<FontAwesomeIcon icon={faFilePdf} size="lg" />
-							RESUME
-						</ListItem>
-					</li>
-				</NavList>
-			</nav>
+		<div>
+			<Wrapper>
+				<Logo href="/">
+					<div>JG</div>
+				</Logo>
+				<nav>
+					<NavList>
+						<li>
+							<ListItem href="/">
+								<FontAwesomeIcon icon={faHome} size="lg" />
+								HOME
+							</ListItem>
+						</li>
+						<li>
+							<ListItem href="#about">
+								<FontAwesomeIcon icon={faUser} size="lg" />
+								ABOUT
+							</ListItem>
+						</li>
+						<li>
+							<ListItem href="#projects">
+								<FontAwesomeIcon icon={faLaptopFile} size="lg" />
+								PROJECTS
+							</ListItem>
+						</li>
+						<li>
+							<ListItem href="#contact">
+								<FontAwesomeIcon icon={faEnvelope} size="lg" />
+								CONTACT
+							</ListItem>
+						</li>
+						<li>
+							<ListItem href="/">
+								<FontAwesomeIcon icon={faFilePdf} size="lg" />
+								RESUME
+							</ListItem>
+						</li>
+					</NavList>
+				</nav>
+			</Wrapper>
 			<Waves src={waves} alt="" />
-		</Wrapper>
+		</div>
 	);
 }
 

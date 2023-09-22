@@ -12,10 +12,6 @@ export default function Footer() {
 
 const Wrapper = styled.footer`
 	text-transform: uppercase;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
 	display: flex;
 	justify-content: center;
 	padding: 16px 0;

@@ -4,8 +4,9 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     :root {
 	    --color-background: hsl(240, 8%, 9%);
-	    --color-text: hsl(214, 16%, 70%);
-	    --color-heading: hsl(60, 100%, 100%);
+	    --color-text: hsl(210, 25%, 88%);
+	    --color-white: hsl(60, 100%, 100%);
+        --color-offWhite: hsl(45, 29%, 97%);
 	    --color-gray-50: hsl(210, 19%, 10%);
         --color-gray-100: hsl(210, 15%, 20%);
         --color-gray-200: hsl(210, 15%, 25%);

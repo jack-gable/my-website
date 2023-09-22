@@ -95,7 +95,7 @@ export default function Aboutpage() {
 						I&apos;m not coding, I like to play basketball with my friends or
 						I&apos;m weight-lifting.
 					</motion.p>
-					<Button href="/contact">Contact Me</Button>
+					{/* <Button href="/contact">Contact Me</Button> */}
 				</div>
 			</div>
 			<div className={styles.stageCubeCont}>
