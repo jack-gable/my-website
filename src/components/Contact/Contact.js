@@ -1,104 +1,43 @@
 "use client";
 import React from "react";
-import emailjs from "@emailjs/browser";
-import Map from "@/components/Map";
 import styled from "styled-components";
+import Button from "../Button";
 
 export default function Contact() {
-	const formRef = React.useRef();
-	const [status, setStatus] = React.useState("idle");
-
-	const sendEmail = (e) => {
-		e.preventDefault();
-
-		setStatus("loading");
-
-		emailjs
-			.sendForm(
-				"service_ytyznwp",
-				"template_k123u8r",
-				formRef.current,
-				"T-qVPUOqL3MyNlEo0"
-			)
-			.then(
-				(result) => {
-					setStatus("success");
-				},
-				(error) => {
-					alert("Failed to send message.");
-					console.log(error);
-					setStatus("error");
-				}
-			);
-
-		e.target.reset();
-	};
-
-	React.useEffect(() => {
-		if (status === "success") {
-			window.setTimeout(() => setStatus("idle"), 3000);
-		}
-	}, [status]);
-
-	React.useEffect(() => {
-		if (status === "error") {
-			window.alert("Error occurred while sending message");
-		}
-	}, [status]);
-
 	return (
 		<>
-			<div>
-				<h1>Contact Me</h1>
-				<p>
-					Please reach out to me if you have any questions! Shoot me a message
-					if you want to find out more about me or the projects I am working on.
-				</p>
-				<div>
-					<div>
-						<form ref={formRef} onSubmit={sendEmail}>
-							<ul>
-								<li>
-									<input type="text" name="name" placeholder="Name" required />
-								</li>
-								<li>
-									<input
-										type="email"
-										name="email"
-										placeholder="Email"
-										required
-									/>
-								</li>
-								<li>
-									<input
-										placeholder="Subject"
-										type="text"
-										name="subject"
-										required
-									/>
-								</li>
-								<li>
-									<textarea
-										placeholder="Message"
-										name="message"
-										required
-									></textarea>
-								</li>
-								<li>
-									<button type="submit">
-										{status === "idle" && <p>SEND</p>}
-										{status === "loading" && <p>SENDING...</p>}
-										{status === "success" && <p>MESSAGE SENT!</p>}
-									</button>
-								</li>
-							</ul>
-						</form>
-					</div>
-					<div>
-						<Map />
-					</div>
-				</div>
-			</div>
+			<Wrapper>
+				<Title>Contact Me</Title>
+				<Desc>
+					Please feel free to reach to me if want to know more about me or about
+					the work I&apos;m currently doing.
+				</Desc>
+				<Button href="/contact" variant="outline">
+					CONTACT ME!
+				</Button>
+			</Wrapper>
 		</>
 	);
 }
+
+const Wrapper = styled.section`
+	padding: 6rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+`;
+
+const Title = styled.h2`
+	font-size: 2.5rem;
+	padding-bottom: 2.5rem;
+	text-align: center;
+`;
+
+const Desc = styled.p`
+	width: 70%;
+	text-align: center;
+	padding-bottom: 48px;
+`;

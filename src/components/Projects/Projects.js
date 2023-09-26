@@ -6,11 +6,10 @@ import movieSearch1 from "../../../public/assests/img/movie-search-1.png";
 import weatherApp1 from "../../../public/assests/img/weather-app-1.png";
 import Image from "next/image";
 import styled from "styled-components";
-import Divider from "../Divider";
 
 export default function Projects() {
 	return (
-		<Wrapper>
+		<Wrapper id="projects">
 			<HeadingWrapper>
 				<Title>My Projects</Title>
 				<Desc>
@@ -33,8 +32,6 @@ export default function Projects() {
 					<ProjectImage
 						src={notesApp1}
 						alt="A notes app clone of Google Keep."
-						width={300}
-						height={200}
 						loading="lazy"
 					/>
 					<div>
@@ -63,19 +60,11 @@ export default function Projects() {
 					<ProjectImage
 						src={movieSearch1}
 						alt="A movie search app"
-						width={300}
-						height={200}
 						loading="lazy"
 					/>
 				</Project>
 				<Project>
-					<ProjectImage
-						src={weatherApp1}
-						alt="A weather app"
-						width={300}
-						height={200}
-						loading="lazy"
-					/>
+					<ProjectImage src={weatherApp1} alt="A weather app" loading="lazy" />
 					<div>
 						<ProjectTitle>MyWeather App</ProjectTitle>
 						<p>
@@ -147,6 +136,9 @@ const ProjectImage = styled(Image)`
 	border-radius: 10px;
 	box-shadow: 4px 6px 10px var(--color-gray-400);
 	background-color: var(--color-gray-400);
+	width: 300px;
+	height: 200px;
+	aspect-ratio: 3 / 2;
 `;
 
 const ProjectTitle = styled.h3`

@@ -3,23 +3,15 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faEnvelope,
-	faFilePdf,
-	faHome,
-	faLaptopFile,
-	faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf, faHome } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import waves from "../../../public/assests/img/layered-waves-haikei-1.svg";
-import VisuallyHidden from "../VisuallyHidden";
+import waves from "../../../public/assests/img/layered-waves-haikei.svg";
 
 export default function Header() {
 	return (
-		<>
+		<div>
 			<Wrapper>
 				<Logo href="/">
-					<VisuallyHidden>My initials as a logo - Home</VisuallyHidden>
 					<div>JG</div>
 				</Logo>
 				<nav>
@@ -31,24 +23,6 @@ export default function Header() {
 							</ListItem>
 						</li>
 						<li>
-							<ListItem href="#about">
-								<FontAwesomeIcon icon={faUser} size="lg" />
-								ABOUT
-							</ListItem>
-						</li>
-						<li>
-							<ListItem href="#projects">
-								<FontAwesomeIcon icon={faLaptopFile} size="lg" />
-								PROJECTS
-							</ListItem>
-						</li>
-						<li>
-							<ListItem href="/contact">
-								<FontAwesomeIcon icon={faEnvelope} size="lg" />
-								CONTACT
-							</ListItem>
-						</li>
-						<li>
 							<ListItem href="/">
 								<FontAwesomeIcon icon={faFilePdf} size="lg" />
 								RESUME
@@ -56,9 +30,9 @@ export default function Header() {
 						</li>
 					</NavList>
 				</nav>
-				<Waves src={waves} alt="" />
 			</Wrapper>
-		</>
+			<Waves src={waves} alt="" />
+		</div>
 	);
 }
 
@@ -67,11 +41,6 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: baseline;
 	padding: 32px 48px;
-	/* position: sticky;
-	top: -16px;
-	background: transparent;
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px); */
 `;
 
 const Logo = styled(Link)`

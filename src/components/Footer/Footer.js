@@ -14,5 +14,6 @@ const Wrapper = styled.footer`
 	text-transform: uppercase;
 	display: flex;
 	justify-content: center;
-	padding: 16px 0;
+	padding: 32px 0;
+	background-color: var(--color-gray-100);
 `;

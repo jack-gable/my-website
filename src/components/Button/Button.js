@@ -23,8 +23,8 @@ const SIZES = {
 export default function Button({
 	href,
 	children,
-	variant,
-	size,
+	variant = "fill",
+	size = "medium",
 	...delegated
 }) {
 	const styles = SIZES[size];

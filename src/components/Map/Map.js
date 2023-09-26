@@ -39,7 +39,13 @@ export default function WeatherMap() {
 			<MapContainer
 				center={position}
 				zoom={11}
-				style={{ width: 400, height: 500, margin: "0 auto", borderRadius: 10 }}
+				style={{
+					width: 400,
+					height: 500,
+					margin: "0 auto",
+					borderRadius: 10,
+					backgroundColor: "var(--color-gray-600)",
+				}}
 				key={`${latitude}-${longitude}`}
 			>
 				<TileLayer

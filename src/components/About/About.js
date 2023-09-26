@@ -58,14 +58,17 @@ export default function About() {
 					</TailwindIcon>
 					Tailwind-CSS
 				</Icon>
+				<Icon style={{ border: "2px solid #f0abee" }}>
+					💅 Styled-Components
+				</Icon>
 			</IconWrapper>
 			<div>
 				<BackgroundTitle>Get to know Me!</BackgroundTitle>
 				<p>
 					My background is in biology and computer science. I have a BSc in
 					Biology and a minor in Computer Science from Sonoma State University.
-					When I&apos;m not coding, I like to play basketball with my friends or
-					workout.
+					When I&apos;m not working on side projects or learning new
+					technologies, I like to play basketball with my friends or workout.
 				</p>
 			</div>
 		</Wrapper>
