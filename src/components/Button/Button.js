@@ -2,100 +2,41 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-const SIZES = {
-	small: {
-		"--borderRadius": 2 + "px",
-		"--fontSize": 16 / 16 + "rem",
-		"--padding": "6px 12px",
-	},
-	medium: {
-		"--borderRadius": 2 + "px",
-		"--fontSize": 18 / 16 + "rem",
-		"--padding": "14px 20px",
-	},
-	large: {
-		"--borderRadius": 4 + "px",
-		"--fontSize": 21 / 16 + "rem",
-		"--padding": "18px 32px",
-	},
-};
-
-export default function Button({
-	href,
-	children,
-	variant = "fill",
-	size = "medium",
-	...delegated
-}) {
-	const styles = SIZES[size];
-
-	let Component;
-	if (variant === "fill") {
-		Component = FillButton;
-	} else if (variant === "outline") {
-		Component = OutlineButton;
-	} else if (variant === "ghost") {
-		Component = GhostButton;
-	} else {
-		throw new Error(`Unrecognized Button variant: ${variant}`);
-	}
-
+export default function Button({ href, children, ...delegated }) {
 	return (
-		<Component
-			href={href}
-			as={href ? Link : "button"}
-			style={styles}
-			{...delegated}
-		>
-			{children}
-		</Component>
+		<Pushable href={href} as={href ? Link : "button"} {...delegated}>
+			<Front>{children}</Front>
+		</Pushable>
 	);
 }
 
-const ButtonBase = styled.button`
-	font-size: var(--fontSize);
-	border-radius: var(--borderRadius);
-	padding: var(--padding);
-	border: 2px solid transparent;
+const Front = styled.span`
+	display: block;
+	padding: 12px 42px;
+	border-radius: 12px;
+	font-size: 1.25rem;
+	background: var(--color-secondary);
+	color: white;
+	transform: translateY(-4px);
+	transition: transform 500ms;
+`;
+
+const Pushable = styled(Link)`
+	background: var(--color-primary);
+	border: none;
+	border-radius: 12px;
+	padding: 0;
+	cursor: pointer;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 600;
 
-	&:focus {
-		outline-color: var(--color-primary);
-		outline-offset: 4px;
-	}
-`;
-
-const FillButton = styled(ButtonBase)`
-	background-color: var(--color-primary);
-	color: var(--color-gray-900);
-
-	&:hover {
-		background-color: var(--color-secondary);
-		color: var(--color-offWhite);
-	}
-`;
-
-const OutlineButton = styled(ButtonBase)`
-	background-color: var(--color-background);
-	color: var(--color-primary);
-	border: 2px solid currentColor;
-
-	&:hover {
-		background-color: var(--color-offWhite);
-	}
-`;
-
-const GhostButton = styled(ButtonBase)`
-	color: var(--color-gray-600);
-	background-color: transparent;
-
-	&:focus {
-		outline-color: var(--color-gray-600);
+	&:hover ${Front} {
+		transform: translateY(-6px);
+		transition: transform 250ms;
 	}
 
-	&:hover {
-		background-color: var(--color-gray-800);
-		color: var(--color-gray-50);
+	&:active ${Front} {
+		transform: translateY(-2px);
+		transition: transform 50ms;
 	}
 `;

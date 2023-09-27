@@ -9,6 +9,8 @@ export default function WeatherMap() {
 	const latitude = 37.7749;
 	const longitude = -122.4194;
 	const position = [latitude, longitude];
+	const circleCenter = [latitude, longitude];
+	const circleRadius = 14000;
 
 	const markerIcon = new L.Icon({
 		iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
@@ -38,7 +40,7 @@ export default function WeatherMap() {
 			></Script>
 			<MapContainer
 				center={position}
-				zoom={11}
+				zoom={10}
 				style={{
 					width: 400,
 					height: 500,
@@ -47,12 +49,16 @@ export default function WeatherMap() {
 					backgroundColor: "var(--color-gray-600)",
 				}}
 				key={`${latitude}-${longitude}`}
+				dragging={false}
+				touchZoom={false}
+				zoomControl={false}
 			>
 				<TileLayer
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 					attribution="Map data © OpenStreetMap contributors"
 				/>
 				<Marker position={position} icon={markerIcon} />
+				<Circle center={circleCenter} radius={circleRadius} color="blue" />
 			</MapContainer>
 		</>
 	);

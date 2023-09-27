@@ -124,7 +124,9 @@ export default function Contactpage() {
 							</FormList>
 						</form>
 					</Form>
-					<div>{/* <DynamicMap /> */}</div>
+					<div>
+						<DynamicMap />
+					</div>
 				</Container>
 			</Wrapper>
 		</>

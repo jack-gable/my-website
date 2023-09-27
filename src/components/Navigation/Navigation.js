@@ -11,7 +11,7 @@ import {
 	faLaptopFile,
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Navigation.module.css";
+import styled from "styled-components";
 
 const LINKS = [
 	{
@@ -24,14 +24,14 @@ const LINKS = [
 	{
 		slug: "about",
 		label: "ABOUT",
-		href: "/about",
+		href: "#about",
 		icon: faUser,
 		target: "",
 	},
 	{
 		slug: "projects",
 		label: "PROJECTS",
-		href: "/projects",
+		href: "#projects",
 		icon: faLaptopFile,
 		target: "",
 	},
@@ -57,38 +57,71 @@ export default function Navigation() {
 	const id = React.useId();
 
 	return (
-		<nav className={styles.nav} onMouseLeave={() => setHoveredNavItem(null)}>
-			<ul className={styles.navList}>
+		<nav onMouseLeave={() => setHoveredNavItem(null)}>
+			<NavList>
 				{LINKS.map(({ slug, label, href, icon, target }) => (
-					<li
+					<ListItem
 						key={slug}
-						className={styles.listItem}
 						style={{
 							zIndex: hoveredNavItem === slug ? 1 : 2,
 						}}
 					>
 						{hoveredNavItem === slug && (
-							<motion.div
+							<Hovered
 								layoutId={id}
-								className={styles.hovered}
 								initial={{
 									borderRadius: 8,
 								}}
 							/>
 						)}
 
-						<Link
-							className={styles.link}
+						<NavLink
 							href={href}
 							target={target}
 							onMouseEnter={() => setHoveredNavItem(slug)}
 						>
-							<FontAwesomeIcon icon={icon} size="xl" />
+							<FontAwesomeIcon icon={icon} size="lg" />
 							<div>{label}</div>
-						</Link>
-					</li>
+						</NavLink>
+					</ListItem>
 				))}
-			</ul>
+			</NavList>
 		</nav>
 	);
 }
+
+const NavList = styled.ul`
+	display: flex;
+	gap: 16px;
+	padding: 0;
+	list-style-type: none;
+`;
+
+const ListItem = styled.li`
+	position: relative;
+`;
+
+const NavLink = styled(Link)`
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	position: relative;
+	padding: 8px;
+	text-decoration: none;
+	color: var(--color-offWhite);
+	opacity: 0.7;
+	transition: opacity 500ms;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+		filter: brightness(110%);
+		color: var(--color-white);
+	}
+`;
+
+const Hovered = styled(motion.div)`
+	position: absolute;
+	inset: 0;
+	background: var(--color-gray-600);
+`;

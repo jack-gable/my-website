@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         background: var(--color-background);
-        color: var(--color-text);
+        color: var(--color-offWhite);
     }
     /*
     6. Improve media defaults
