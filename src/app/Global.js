@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
 	    --color-text: hsl(210, 25%, 88%);
 	    --color-white: hsl(60, 100%, 100%);
         --color-offWhite: hsl(45, 29%, 97%);
-        --color-black: hsl(0, 0%, 5%)
+        --color-black: hsl(0, 0%, 5%);
 	    --color-gray-50: hsl(210, 19%, 10%);
         --color-gray-100: hsl(210, 15%, 20%);
         --color-gray-200: hsl(210, 15%, 25%);
@@ -97,6 +97,12 @@ const GlobalStyles = createGlobalStyle`
     #root,
     #__next {
         isolation: isolate;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth !important;
+        }
     }
 `;
 

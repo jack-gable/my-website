@@ -9,9 +9,10 @@ import Projects from "@/components/Projects";
 export default function Home() {
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<main>
 				<Cta />
+				<Divider />
 				<About />
 				<Divider />
 				<Projects />

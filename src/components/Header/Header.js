@@ -2,16 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faEnvelope,
-	faFilePdf,
-	faHome,
-	faLaptopFile,
-	faUser,
-} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import waves from "../../../public/assests/img/layered-waves-haikei-1.svg";
 import VisuallyHidden from "../VisuallyHidden";
 import Navigation from "../Navigation";
 
@@ -24,7 +15,6 @@ export default function Header() {
 					<div>JG</div>
 				</Logo>
 				<Navigation />
-				<Waves src={waves} alt="" />
 			</Wrapper>
 		</>
 	);
@@ -35,11 +25,30 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: baseline;
 	padding: 32px 48px;
-	/* position: sticky;
-	top: -16px;
-	background: transparent;
+	background-image: linear-gradient(
+		180deg,
+		hsl(224deg 100% 56%) 0%,
+		hsl(230deg 82% 56%) 20%,
+		hsl(236deg 65% 56%) 34%,
+		hsl(240deg 48% 53%) 45%,
+		hsl(240deg 29% 41%) 53%,
+		hsl(240deg 10% 29%) 59%,
+		hsl(228deg 5% 21%) 65%,
+		hsl(220deg 11% 16%) 71%,
+		hsl(207deg 16% 11%) 77%,
+		hsl(218deg 16% 10%) 84%,
+		hsl(230deg 13% 9%) 92%,
+		hsl(240deg 9% 9%) 100%
+	);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	opacity: 0.9;
 	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px); */
+	-webkit-backdrop-filter: blur(12px);
+	z-index: 99999;
+	filter: brightness(115%);
 `;
 
 const Logo = styled(Link)`

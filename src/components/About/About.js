@@ -16,10 +16,10 @@ export default function About() {
 		<Wrapper id="about">
 			<div>
 				<Title>About Me</Title>
-				<p>
+				<Desc>
 					I&apos;m a frontend developer based out of the San Francisco Bay Area.
 					I love building apps that are accessible and user-friendly.
-				</p>
+				</Desc>
 			</div>
 
 			<IconWrapper>
@@ -64,12 +64,12 @@ export default function About() {
 			</IconWrapper>
 			<div>
 				<BackgroundTitle>Get to know Me!</BackgroundTitle>
-				<p>
+				<Desc>
 					My background is in biology and computer science. I have a BSc in
 					Biology and a minor in Computer Science from Sonoma State University.
 					When I&apos;m not working on side projects or learning new
 					technologies, I like to play basketball with my friends or workout.
-				</p>
+				</Desc>
 			</div>
 		</Wrapper>
 	);
@@ -123,4 +123,8 @@ const Icon = styled.div`
 
 const TailwindIcon = styled.div`
 	width: 25px;
+`;
+
+const Desc = styled.p`
+	text-align: center;
 `;

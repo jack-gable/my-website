@@ -9,6 +9,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import VisuallyHidden from "@/components/VisuallyHidden";
+import Button from "@/components/Button";
+import { useRouter } from "next/navigation";
 
 const DynamicMap = dynamic(() => import("@/components/Map"), {
 	ssr: false,
@@ -18,6 +20,7 @@ const DynamicMap = dynamic(() => import("@/components/Map"), {
 export default function Contactpage() {
 	const formRef = React.useRef();
 	const [status, setStatus] = React.useState("idle");
+	const router = useRouter();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -43,6 +46,7 @@ export default function Contactpage() {
 			);
 
 		e.target.reset();
+		router.push("/");
 	};
 
 	React.useEffect(() => {
@@ -115,18 +119,16 @@ export default function Contactpage() {
 									></textarea>
 								</ListItem>
 								<ListItem>
-									<SubmitButton type="submit">
+									<Button type="submit">
 										{status === "idle" && <p>SEND</p>}
 										{status === "loading" && <p>SENDING...</p>}
 										{status === "success" && <p>MESSAGE SENT!</p>}
-									</SubmitButton>
+									</Button>
 								</ListItem>
 							</FormList>
 						</form>
 					</Form>
-					<div>
-						<DynamicMap />
-					</div>
+					<div>{/* <DynamicMap /> */}</div>
 				</Container>
 			</Wrapper>
 		</>
@@ -172,6 +174,7 @@ const FormList = styled.ul`
 const ListItem = styled.li`
 	padding-bottom: 16px;
 	width: 100%;
+	filter: drop-shadow(2px 4px 4px var(--color-gray-900));
 
 	& > input,
 	& > textarea {
@@ -191,6 +194,10 @@ const ListItem = styled.li`
 	& > textarea {
 		resize: none;
 		height: 150px;
+	}
+
+	&:last-of-type {
+		filter: none;
 	}
 `;
 
@@ -215,22 +222,22 @@ const SocialLink = styled(Link)`
 	}
 `;
 
-const SubmitButton = styled.button`
-	font-size: 1.25rem;
-	border-radius: 2px;
-	padding: 8px 16px;
-	border: 2px solid currentColor;
-	text-decoration: none;
-	font-weight: 700;
-	color: var(--color-primary);
-	background-color: var(--color-background);
+// const SubmitButton = styled.button`
+// 	font-size: 1.25rem;
+// 	border-radius: 2px;
+// 	padding: 8px 16px;
+// 	border: 2px solid currentColor;
+// 	text-decoration: none;
+// 	font-weight: 700;
+// 	color: var(--color-primary);
+// 	background-color: var(--color-background);
 
-	&:focus {
-		outline-color: var(--color-gray-600);
-		outline-offset: 2px;
-	}
+// 	&:focus {
+// 		outline-color: var(--color-gray-600);
+// 		outline-offset: 2px;
+// 	}
 
-	&:hover {
-		background-color: var(--color-offWhite);
-	}
-`;
+// 	&:hover {
+// 		background-color: var(--color-offWhite);
+// 	}
+// `;

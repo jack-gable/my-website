@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
-import Button from "@/components/Button";
+import Button from "../Button";
 import notesApp1 from "../../../public/assests/img/notes-app-1.png";
 import movieSearch1 from "../../../public/assests/img/movie-search-1.png";
 import weatherApp1 from "../../../public/assests/img/weather-app-1.png";
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 
 export default function Projects() {
 	return (
@@ -34,29 +37,38 @@ export default function Projects() {
 						alt="A notes app clone of Google Keep."
 						loading="lazy"
 					/>
-					<div>
-						<ProjectTitle>Google Keep Clone</ProjectTitle>
-						<p>
-							A small version of the Google Keep notes app. It&apos;s built with
-							React and styled components.
-						</p>
-						{/* <Button href="https://reliable-malasada-b76007.netlify.app" target="_blank">
-								See live version
-							</Button> */}
-					</div>
+					<Container>
+						<div>
+							<ProjectTitle>Google Keep Clone</ProjectTitle>
+							<p>
+								A small version of the Google Keep notes app. It&apos;s a simple
+								and minimalistic approach to the very popular note taking app.
+							</p>
+						</div>
+						<ProjectButton
+							href="https://reliable-malasada-b76007.netlify.app"
+							target="_blank"
+						>
+							VIEW PROJECT <FontAwesomeIcon icon={faGreaterThan} />
+						</ProjectButton>
+					</Container>
 				</Project>
 				<Project>
-					<div>
-						<ProjectTitle>Movie Search App</ProjectTitle>
-						<p>
-							Movie Search is a simple movie lookup site that allows the user to
-							find his/her favorite movies. It&apos;s built with React and
-							utilizes the MovieDB api.
-						</p>
-						{/* <Button href="https://lively-seahorse-d423ea.netlify.app/" target="_blank">
-								See live version
-							</Button> */}
-					</div>
+					<Container>
+						<div>
+							<ProjectTitle>Movie Search App</ProjectTitle>
+							<p>
+								A web application for users to browse their favorite movies
+								based on movie title search.
+							</p>
+						</div>
+						<ProjectButton
+							href="https://lively-seahorse-d423ea.netlify.app/"
+							target="_blank"
+						>
+							VIEW PROJECT <FontAwesomeIcon icon={faGreaterThan} />
+						</ProjectButton>
+					</Container>
 					<ProjectImage
 						src={movieSearch1}
 						alt="A movie search app"
@@ -65,17 +77,21 @@ export default function Projects() {
 				</Project>
 				<Project>
 					<ProjectImage src={weatherApp1} alt="A weather app" loading="lazy" />
-					<div>
-						<ProjectTitle>MyWeather App</ProjectTitle>
-						<p>
-							MyWeather app is a weather application that shows the user the
-							weather based on a city input. It&apos;s built with React and
-							utilizes the OpenWeatherMap api.
-						</p>
-						{/* <Button href="https://tourmaline-sherbet-89e3c3.netlify.app/" target="_blank">
-								See live version
-							</Button> */}
-					</div>
+					<Container>
+						<div>
+							<ProjectTitle>MyWeather App</ProjectTitle>
+							<p>
+								Developed a web application that shows the user the weather
+								based on a user location input.
+							</p>
+						</div>
+						<ProjectButton
+							href="https://tourmaline-sherbet-89e3c3.netlify.app/"
+							target="_blank"
+						>
+							VIEW PROJECT <FontAwesomeIcon icon={faGreaterThan} />
+						</ProjectButton>
+					</Container>
 				</Project>
 			</ProjectsContainer>
 		</Wrapper>
@@ -120,7 +136,7 @@ const ProjectsContainer = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(3, 1fr);
-	gap: 0 3rem;
+	gap: 2.5rem;
 	align-items: center;
 	justify-items: center;
 `;
@@ -130,6 +146,12 @@ const Project = styled.article`
 	justify-content: center;
 	gap: 0 4rem;
 	padding: 32px;
+`;
+
+const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 `;
 
 const ProjectImage = styled(Image)`
@@ -145,4 +167,17 @@ const ProjectTitle = styled.h3`
 	font-size: 1.5rem;
 	padding: 16px 0;
 	color: var(--color-gray-800);
+`;
+
+const ProjectButton = styled(Link)`
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	width: fit-content;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
 `;
