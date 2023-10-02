@@ -23,7 +23,7 @@ const LINKS = [
 	},
 ];
 
-export default function Navigation() {
+export default function PageHeader() {
 	const [hoveredNavItem, setHoveredNavItem] = React.useState(null);
 
 	const id = React.useId();

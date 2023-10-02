@@ -19,6 +19,7 @@ const DynamicMap = dynamic(() => import("@/components/Map"), {
 
 export default function Contactpage() {
 	const formRef = React.useRef();
+	const inputRef = React.useRef();
 	const [status, setStatus] = React.useState("idle");
 	const router = useRouter();
 
@@ -61,6 +62,10 @@ export default function Contactpage() {
 		}
 	}, [status]);
 
+	React.useEffect(() => {
+		inputRef.current.focus();
+	}, []);
+
 	return (
 		<>
 			<Wrapper>
@@ -93,7 +98,13 @@ export default function Contactpage() {
 						<form ref={formRef} onSubmit={sendEmail}>
 							<FormList>
 								<ListItem>
-									<input type="text" name="name" placeholder="Name" required />
+									<input
+										ref={inputRef}
+										type="text"
+										name="name"
+										placeholder="Name"
+										required
+									/>
 								</ListItem>
 								<ListItem>
 									<input
