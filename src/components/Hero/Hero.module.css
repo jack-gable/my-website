@@ -1,0 +1,31 @@
+.wrapper {
+	width: 100%;
+	max-width: 750px;
+	padding: 12rem 0;
+	display: grid;
+	place-content: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.title {
+	font-size: 3.5rem;
+}
+
+.buttonWrapper {
+	margin: 32px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.flexWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.peep {
+	height: 300px;
+	width: 200px;
+	filter: drop-shadow(2px 4px 8px var(--color-decorative-500));
+}

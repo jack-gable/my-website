@@ -1,0 +1,31 @@
+.navList {
+	display: flex;
+	gap: 12px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.listItem {
+	position: relative;
+}
+
+.navLink {
+	display: block;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+	padding: 6px 10px;
+	text-decoration: none;
+	color: var(--color-text);
+	transition: background 200ms;
+}
+
+.navLink:hover,
+.navLink:focus {
+	background: var(--color-decorative-100);
+}

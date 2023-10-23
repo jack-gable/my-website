@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -5,7 +6,7 @@ import { MapContainer, TileLayer, Marker, Circle } from "react-leaflet";
 import Head from "next/head";
 import Script from "next/script";
 
-export default function WeatherMap() {
+function Map() {
 	const latitude = 37.7749;
 	const longitude = -122.4194;
 	const position = [latitude, longitude];
@@ -42,11 +43,11 @@ export default function WeatherMap() {
 				center={position}
 				zoom={10}
 				style={{
-					width: 400,
-					height: 500,
+					width: 300,
+					height: 400,
 					margin: "0 auto",
 					borderRadius: 10,
-					backgroundColor: "var(--color-gray-600)",
+					backgroundColor: "var(--color-gray-700)",
 				}}
 				key={`${latitude}-${longitude}`}
 				dragging={false}
@@ -63,3 +64,5 @@ export default function WeatherMap() {
 		</>
 	);
 }
+
+export default Map;

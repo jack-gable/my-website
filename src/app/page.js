@@ -1,25 +1,22 @@
+import React from "react";
+import styles from "./homepage.module.css";
+import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Cta from "@/components/Cta";
-import Divider from "@/components/Divider";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Divider from "@/components/Divider";
 
-export default function Home() {
+function Home() {
 	return (
-		<>
-			<Header />
-			<main>
-				<Cta />
-				<Divider />
-				<About />
-				<Divider />
-				<Projects />
-				<Divider />
-				<Contact />
-			</main>
-			<Footer />
-		</>
+		<div className={styles.wrapper}>
+			<Hero />
+			<About />
+			<Divider />
+			<Projects />
+			<Divider />
+			<Contact />
+		</div>
 	);
 }
+
+export default Home;

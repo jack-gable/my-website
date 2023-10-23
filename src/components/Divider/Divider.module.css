@@ -1,0 +1,8 @@
+.dividerLine {
+	margin: 1rem auto;
+	background-color: var(--color-gray-700);
+	width: 65%;
+	min-width: 200px;
+	height: 4px;
+	border-radius: 99999px;
+}

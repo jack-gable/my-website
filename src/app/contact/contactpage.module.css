@@ -1,0 +1,43 @@
+.wrapper {
+	padding: 4rem 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 64px;
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.title {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: -16px;
+	padding-bottom: 16px;
+}
+
+.socials {
+	width: 400px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: -48px;
+}
+
+.socialsLink:link {
+	color: var(--color-gray-500);
+}
+
+.socialsLink:visited {
+	color: var(--color-gray-700);
+}
+
+.socialsLink:hover,
+.socialsLink:focus {
+	color: var(--color-primary-500);
+}

@@ -1,0 +1,40 @@
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+}
+
+.formList {
+	list-style-type: none;
+}
+
+.listItem {
+	padding-bottom: 16px;
+	width: 100%;
+	filter: drop-shadow(2px 4px 4px var(--color-gray-900));
+}
+
+.listItem > input,
+.listItem > textarea {
+	border: none;
+	border-radius: 10px;
+	background-color: var(--color-gray-900);
+	color: black;
+	width: 400px;
+	line-height: 1.6;
+	padding: 6px 8px;
+}
+
+.listItem::placeholder {
+	color: var(--color-gray-300);
+}
+
+.listItem > textarea {
+	resize: none;
+	height: 150px;
+}
+
+.listItem:last-of-type {
+	filter: none;
+}

@@ -1,127 +1,46 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faEnvelope,
 	faFilePdf,
-	faFileWord,
-	faHome,
 	faLaptopFile,
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 
-const LINKS = [
-	{
-		slug: "home",
-		label: "HOME",
-		href: "/",
-		icon: faHome,
-		target: "",
-	},
-	{
-		slug: "about",
-		label: "ABOUT",
-		href: "#about",
-		icon: faUser,
-		target: "",
-	},
-	{
-		slug: "projects",
-		label: "PROJECTS",
-		href: "#projects",
-		icon: faLaptopFile,
-		target: "",
-	},
-	{
-		slug: "contact",
-		label: "CONTACT",
-		href: "/contact",
-		icon: faEnvelope,
-		target: "",
-	},
-	{
-		slug: "resume",
-		label: "RESUME",
-		href: "/",
-		icon: faFilePdf,
-		target: "_blank",
-	},
-];
+import styles from "./Navigation.module.css";
 
-export default function Navigation() {
-	const [hoveredNavItem, setHoveredNavItem] = React.useState(null);
-
-	const id = React.useId();
-
+function Navigation() {
 	return (
-		<nav onMouseLeave={() => setHoveredNavItem(null)}>
-			<NavList>
-				{LINKS.map(({ slug, label, href, icon, target }) => (
-					<ListItem
-						key={slug}
-						style={{
-							zIndex: hoveredNavItem === slug ? 1 : 2,
-						}}
-					>
-						{hoveredNavItem === slug && (
-							<Hovered
-								layoutId={id}
-								initial={{
-									borderRadius: 8,
-								}}
-							/>
-						)}
-
-						<NavLink
-							href={href}
-							target={target}
-							onMouseEnter={() => setHoveredNavItem(slug)}
-						>
-							<FontAwesomeIcon icon={icon} size="lg" />
-							<div>{label}</div>
-						</NavLink>
-					</ListItem>
-				))}
-			</NavList>
+		<nav>
+			<ul className={styles.navList}>
+				<li className={styles.listItem}>
+					<Link className={styles.navLink} href="/#about">
+						<FontAwesomeIcon icon={faUser} size="lg" />
+						<div>ABOUT</div>
+					</Link>
+				</li>
+				<li className={styles.listItem}>
+					<Link className={styles.navLink} href="/#projects">
+						<FontAwesomeIcon icon={faLaptopFile} size="lg" />
+						<div>PROJECTS</div>
+					</Link>
+				</li>
+				<li className={styles.listItem}>
+					<Link className={styles.navLink} href="/contact">
+						<FontAwesomeIcon icon={faEnvelope} size="lg" />
+						<div>CONTACT</div>
+					</Link>
+				</li>
+				<li className={styles.listItem}>
+					<Link className={styles.navLink} href="/" target="_blank">
+						<FontAwesomeIcon icon={faFilePdf} size="lg" />
+						<div>RESUME</div>
+					</Link>
+				</li>
+			</ul>
 		</nav>
 	);
 }
 
-const NavList = styled.ul`
-	display: flex;
-	gap: 16px;
-	padding: 0;
-	list-style-type: none;
-`;
-
-const ListItem = styled.li`
-	position: relative;
-`;
-
-const NavLink = styled(Link)`
-	display: flex;
-	align-items: baseline;
-	gap: 8px;
-	position: relative;
-	padding: 8px;
-	text-decoration: none;
-	color: var(--color-offWhite);
-	opacity: 0.7;
-	transition: opacity 500ms;
-
-	&:hover,
-	&:focus {
-		opacity: 1;
-		filter: brightness(110%);
-		color: var(--color-white);
-	}
-`;
-
-const Hovered = styled(motion.div)`
-	position: absolute;
-	inset: 0;
-	background: var(--color-gray-600);
-`;
+export default Navigation;

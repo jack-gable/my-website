@@ -1,19 +1,14 @@
-"use client";
 import React from "react";
-import styled from "styled-components";
+import { PORTFOLIO_TITLE } from "@/constants";
 
-export default function Footer() {
+import styles from "./Footer.module.css";
+
+function Footer() {
 	return (
-		<Wrapper>
-			<p>&copy; 2023 - Jack Gable</p>
-		</Wrapper>
+		<footer>
+			<div className={styles.wrapper}>&copy; 2023 - {PORTFOLIO_TITLE}</div>
+		</footer>
 	);
 }
 
-const Wrapper = styled.footer`
-	text-transform: uppercase;
-	display: flex;
-	justify-content: center;
-	padding: 32px 0;
-	background-color: var(--color-gray-100);
-`;
+export default Footer;
