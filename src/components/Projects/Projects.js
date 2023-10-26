@@ -41,8 +41,6 @@ function Projects() {
 						</div>
 						<Link
 							className={styles.projectButton}
-							// href="https://reliable-malasada-b76007.netlify.app"
-							// target="_blank"
 							href="/projects/google-keep-project"
 						>
 							VIEW PROJECT{" "}
@@ -63,8 +61,7 @@ function Projects() {
 						</div>
 						<Link
 							className={styles.projectButton}
-							href="https://lively-seahorse-d423ea.netlify.app/"
-							target="_blank"
+							href="/projects/movie-search-project"
 						>
 							VIEW PROJECT{" "}
 							<span className={styles.arrow}>
@@ -96,8 +93,7 @@ function Projects() {
 						</div>
 						<Link
 							className={styles.projectButton}
-							href="https://tourmaline-sherbet-89e3c3.netlify.app/"
-							target="_blank"
+							href="/projects/weather-project"
 						>
 							VIEW PROJECT{" "}
 							<span className={styles.arrow}>

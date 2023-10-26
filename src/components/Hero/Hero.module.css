@@ -25,7 +25,5 @@
 }
 
 .peep {
-	height: 300px;
-	width: 200px;
 	filter: drop-shadow(2px 4px 8px var(--color-decorative-500));
 }

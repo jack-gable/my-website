@@ -99,13 +99,11 @@ h1 {
 }
 h2 {
 	font-size: 1.5rem;
-	margin-top: 2em;
 	margin-bottom: 0.5em;
 	font-weight: 600;
 }
 h3 {
 	font-size: 1.25rem;
-	margin-top: 2em;
 	margin-bottom: 0.5em;
 	font-weight: 500;
 }
@@ -135,5 +133,11 @@ button {
 	}
 	h3 {
 		font-size: 1.5rem;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth !important;
 	}
 }

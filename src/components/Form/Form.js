@@ -2,16 +2,15 @@
 import React from "react";
 
 import emailjs from "@emailjs/browser";
-import { useRouter } from "next/navigation";
 import Button from "../Button";
 
 import styles from "./Form.module.css";
+import Spinner from "../Spinner";
 
 function Form() {
 	const formRef = React.useRef();
 	const inputRef = React.useRef();
 	const [status, setStatus] = React.useState("idle");
-	const router = useRouter();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -37,7 +36,6 @@ function Form() {
 			);
 
 		e.target.reset();
-		router.push("/");
 	};
 
 	React.useEffect(() => {
@@ -80,7 +78,7 @@ function Form() {
 				<li className={styles.listItem}>
 					<Button type="submit">
 						{status === "idle" && <>SEND</>}
-						{status === "loading" && <>SENDING...</>}
+						{status === "loading" && <Spinner />}
 						{status === "success" && <>MESSAGE SENT!</>}
 					</Button>
 				</li>

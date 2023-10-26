@@ -1,0 +1,22 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadingSpinner {
+	display: block;
+	height: 32px;
+	width: 32px;
+	animation: spin 1000ms ease infinite;
+	transform-origin: 12px 12px;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(1turn);
+	}
+}

@@ -1,26 +1,26 @@
 import React from "react";
 import { PORTFOLIO_TITLE } from "@/constants";
+import styles from "./moviepage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
-import project1pic from "../../../../public/assests/img/google-project-1.png";
-import project2pic from "../../../../public/assests/img/google-project-2.png";
-import styles from "./googlepage.module.css";
+import project1pic from "../../../../public/assests/img/movie-project-1.png";
+import project2pic from "../../../../public/assests/img/movie-project-2.png";
 import Image from "next/image";
 import Button from "@/components/Button";
 
 export const metadata = {
-	title: `${PORTFOLIO_TITLE} • Google Keep Project`,
+	title: `${PORTFOLIO_TITLE} • Movie Search Project`,
 };
 
-function GoogleKeeppage() {
+function MovieSearchpage() {
 	return (
 		<>
-			<h1 className={styles.title}>Google Keep clone</h1>
+			<h1 className={styles.title}>Movie Search App</h1>
 			<p className={styles.desc}>
-				This Google Keep clone is a React application resembling the notes app
-				by Google. I built features on top of this project that I had made in a
-				bootcamp course. This app is built with React and styled-components. It
-				is a minimalistic and simple approach to the real thing.{" "}
+				This movie search app is a react application that utilizes the Movie
+				Database API. I built features on top of this project that I had made in
+				a bootcamp course. Some of the new features include using the SWR API
+				and adding favorites section.{" "}
 			</p>
 			<h3 className={styles.subtitle}>Tech Stack</h3>
 			<div className={styles.container}>
@@ -29,9 +29,7 @@ function GoogleKeeppage() {
 						<FontAwesomeIcon icon={faReact} color="#5ed4f4" size="lg" />
 						React
 					</div>
-					<div className={styles.icon} style={{ border: "2px solid #f0abee" }}>
-						💅 Styled-Components
-					</div>
+
 					<div className={styles.icon} style={{ border: "2px solid #3CAFBC" }}>
 						<div className={styles.netlifyIcon}>
 							<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +56,7 @@ function GoogleKeeppage() {
 					</div>
 				</div>
 				<Button
-					href="https://google-keep-clone-app.netlify.app"
+					href="https://moviesearch-app-react.netlify.app"
 					target="_blank"
 				>
 					View Live Site
@@ -73,11 +71,11 @@ function GoogleKeeppage() {
 			<Image
 				className={styles.image}
 				src={project2pic}
-				alt="An image of the project showing notes with different colors"
+				alt="An image of the project showing movies of the Lion King"
 				loading="lazy"
 			/>
 		</>
 	);
 }
 
-export default GoogleKeeppage;
+export default MovieSearchpage;

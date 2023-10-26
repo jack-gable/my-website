@@ -7,7 +7,6 @@ import VisuallyHidden from "@/components/VisuallyHidden";
 import styles from "./contactpage.module.css";
 import { PORTFOLIO_TITLE } from "@/constants";
 import Form from "@/components/Form";
-import Map from "@/components/Map";
 
 export const metadata = {
 	title: `${PORTFOLIO_TITLE} • Contact Me`,
@@ -42,14 +41,10 @@ function Contactpage() {
 					<VisuallyHidden>Visit my profile on Github</VisuallyHidden>
 				</Link>
 			</div>
-			<div className={styles.container}>
-				<Form />
-				<Map />
-			</div>
+
+			<Form />
 		</div>
 	);
 }
 
 export default Contactpage;
-
-// todo: add recaptcha to form after getting domain

@@ -16,7 +16,14 @@ function Hero() {
 						<h1 className={styles.title}>Jack Gable</h1>
 						<h2>Web Developer | Front-End Engineer</h2>
 					</div>
-					<Image className={styles.peep} src={peep} alt="" />
+					<Image
+						className={styles.peep}
+						src={peep}
+						alt=""
+						height={300}
+						width={200}
+						priority={true}
+					/>
 				</div>
 				<div className={styles.buttonWrapper}>
 					<Button href="/contact">CONTACT ME</Button>
