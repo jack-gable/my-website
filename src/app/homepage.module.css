@@ -4,6 +4,13 @@
 	align-items: center;
 	width: 100%;
 	max-width: 55rem;
-	padding: 64px 16px;
+	padding: 64px 32px;
 	margin: 0 auto;
+}
+
+@media (min-width: 35rem) {
+	.wrapper {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
 }

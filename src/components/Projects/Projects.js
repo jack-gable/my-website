@@ -51,6 +51,12 @@ function Projects() {
 					</div>
 				</article>
 				<article className={styles.project}>
+					<Image
+						className={styles.projectImage}
+						src={movieSearch1}
+						alt="A movie search app"
+						loading="lazy"
+					/>
 					<div className={styles.container}>
 						<div>
 							<h3 className={styles.projectTitle}>Movie Search App</h3>
@@ -69,12 +75,6 @@ function Projects() {
 							</span>
 						</Link>
 					</div>
-					<Image
-						className={styles.projectImage}
-						src={movieSearch1}
-						alt="A movie search app"
-						loading="lazy"
-					/>
 				</article>
 				<article className={styles.project}>
 					<Image

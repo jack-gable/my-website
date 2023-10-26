@@ -9,7 +9,7 @@ import { PORTFOLIO_TITLE } from "@/constants";
 import Form from "@/components/Form";
 
 export const metadata = {
-	title: `${PORTFOLIO_TITLE} • Contact Me`,
+	title: `Contact Me • ${PORTFOLIO_TITLE}`,
 };
 
 function Contactpage() {

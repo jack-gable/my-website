@@ -1,3 +1,8 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+
 .front {
 	display: block;
 	padding: 12px 42px;

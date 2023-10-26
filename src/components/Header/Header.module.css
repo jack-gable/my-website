@@ -6,7 +6,7 @@
 	height: 5rem;
 	width: 100%;
 	max-width: 55rem;
-	padding: 0 16px;
+	padding: 0 32px;
 	padding-top: 16px;
 	margin-left: auto;
 	margin-right: auto;
@@ -33,4 +33,21 @@
 
 .themeBtn svg {
 	display: block;
+}
+
+.desktopNav {
+	display: none;
+}
+
+.actions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 32px;
+}
+
+@media (min-width: 35rem) {
+	.desktopNav {
+		display: revert;
+	}
 }

@@ -3,6 +3,7 @@
 	gap: 12px;
 	padding: 0;
 	list-style-type: none;
+	flex-direction: column;
 }
 
 .listItem {
@@ -28,4 +29,10 @@
 .navLink:hover,
 .navLink:focus {
 	background: var(--color-decorative-100);
+}
+
+@media (min-width: 35rem) {
+	.navList {
+		flex-direction: row;
+	}
 }
