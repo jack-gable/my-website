@@ -5,3 +5,9 @@
 	text-align: center;
 	padding-bottom: 16px;
 }
+
+@media (max-width: 35rem) {
+	.wrapper {
+		padding-bottom: 32px;
+	}
+}

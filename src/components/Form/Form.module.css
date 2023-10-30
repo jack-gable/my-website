@@ -6,6 +6,7 @@
 
 .formList {
 	list-style-type: none;
+	padding: 0;
 }
 
 .listItem {
@@ -20,7 +21,7 @@
 	border-radius: 10px;
 	background-color: var(--color-gray-900);
 	color: black;
-	width: 400px;
+	min-width: 400px;
 	line-height: 1.6;
 	padding: 6px 8px;
 }
@@ -36,4 +37,11 @@
 
 .listItem:last-of-type {
 	filter: none;
+}
+
+@media (max-width: 35rem) {
+	.listItem > input,
+	.listItem > textarea {
+		min-width: 350px;
+	}
 }

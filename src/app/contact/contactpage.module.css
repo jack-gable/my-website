@@ -15,7 +15,7 @@
 }
 
 .socials {
-	width: 400px;
+	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: -48px;
@@ -32,4 +32,10 @@
 .socialsLink:hover,
 .socialsLink:focus {
 	color: var(--color-primary-500);
+}
+
+@media (max-width: 35rem) {
+	.wrapper > p {
+		padding: 0 16px;
+	}
 }
