@@ -57,7 +57,12 @@ function MobileMenu({ isOpen, setOpen, onDismiss }) {
 										</Link>
 									</li>
 									<li className={styles.listItem} onClick={onDismiss}>
-										<Link className={styles.navLink} href="/" target="_blank">
+										<Link
+											className={styles.navLink}
+											href="https://drive.google.com/file/d/1fcBcw-jvcinHyrM9lV2V1xd6layTcBrP/view?usp=sharing"
+											target="_blank"
+											type="application/pdf"
+										>
 											<FontAwesomeIcon icon={faFilePdf} size="lg" />
 											<div>RESUME</div>
 										</Link>
