@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Logo.module.css";
 
-import { PORTFOLIO_TITLE } from "@/constants";
-
 function Logo({ mobileAlignment = "left" }) {
 	return (
 		<Link
@@ -11,7 +9,7 @@ function Logo({ mobileAlignment = "left" }) {
 			href="/"
 			data-mobile-alignment={mobileAlignment}
 		>
-			{PORTFOLIO_TITLE}
+			JG
 		</Link>
 	);
 }

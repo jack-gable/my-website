@@ -42,6 +42,7 @@ function About() {
 					<FontAwesomeIcon icon={faGitAlt} color="#ec4d28" size="lg" />
 					Git
 				</div>
+
 				<div className={styles.icon} style={{ border: "2px solid #06b6d4" }}>
 					<div className={styles.tailwindIcon}>
 						<svg

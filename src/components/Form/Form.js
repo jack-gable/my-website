@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-
 import emailjs from "@emailjs/browser";
 import Button from "../Button";
-
 import styles from "./Form.module.css";
 import Spinner from "../Spinner";
+import { useRouter } from "next/navigation";
 
 function Form() {
+	const router = useRouter();
 	const formRef = React.useRef();
 	const inputRef = React.useRef();
 	const [status, setStatus] = React.useState("idle");
@@ -40,9 +40,10 @@ function Form() {
 
 	React.useEffect(() => {
 		if (status === "success") {
-			window.setTimeout(() => setStatus("idle"), 3000);
+			window.setTimeout(() => setStatus("idle"), 5000);
+			router.push("/");
 		}
-	}, [status]);
+	}, [status, router]);
 
 	React.useEffect(() => {
 		if (status === "error") {
