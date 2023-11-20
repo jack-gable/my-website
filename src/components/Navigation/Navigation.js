@@ -35,7 +35,7 @@ function Navigation() {
 				<li className={styles.listItem}>
 					<Link
 						className={styles.navLink}
-						href="https://drive.google.com/file/d/1fcBcw-jvcinHyrM9lV2V1xd6layTcBrP/view?usp=sharing"
+						href="https://drive.google.com/file/d/1xTN_QjNX06Xwm0cZ0vhPdVZiEu7rdDrU/view?usp=sharing"
 						target="_blank"
 						type="application/pdf"
 					>

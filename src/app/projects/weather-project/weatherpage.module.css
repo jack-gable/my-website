@@ -45,3 +45,16 @@
 .desc {
 	text-indent: 2.6rem;
 }
+
+@media (max-width: 35rem) {
+	.container {
+		flex-direction: column;
+		gap: 3.5rem;
+		padding-top: 32px;
+		padding-bottom: 0;
+	}
+
+	.subtitle {
+		text-align: center;
+	}
+}

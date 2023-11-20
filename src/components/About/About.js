@@ -92,8 +92,7 @@ function About() {
 					My background is in biology and computer science. I have a Bachelors
 					of Science in Biology and a minor in Computer Science from Sonoma
 					State University. When I&apos;m not working on side projects or
-					learning new technologies, I like to play basketball with my friends
-					or workout.
+					learning new technologies, I like to play basketball or workout.
 				</p>
 			</div>
 		</div>

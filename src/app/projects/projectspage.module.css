@@ -7,3 +7,10 @@
 	padding: 64px 16px;
 	margin: 0 auto;
 }
+
+@media (max-width: 35rem) {
+	.wrapper {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}

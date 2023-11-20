@@ -68,8 +68,7 @@ function GoogleKeeppage() {
 				className={styles.image}
 				src={project1pic}
 				alt="An image of the project showing the initial home page"
-				loading="lazy"
-				height={600}
+				priority={true}
 			/>
 			<Image
 				className={styles.image}

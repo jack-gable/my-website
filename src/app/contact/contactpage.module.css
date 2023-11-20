@@ -38,4 +38,9 @@
 	.wrapper > p {
 		padding: 0 16px;
 	}
+
+	.wrapper {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
 }

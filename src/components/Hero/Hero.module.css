@@ -25,3 +25,13 @@
 .peep {
 	filter: drop-shadow(2px 4px 8px var(--color-decorative-500));
 }
+
+@media (max-width: 35rem) {
+	.wrapper {
+		padding: 6rem 0;
+	}
+
+	.flexWrapper {
+		flex-direction: column;
+	}
+}

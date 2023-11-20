@@ -5,12 +5,21 @@ import Button from "../Button";
 import styles from "./Form.module.css";
 import Spinner from "../Spinner";
 import { useRouter } from "next/navigation";
+import Reaptcha from "reaptcha";
 
 function Form() {
 	const router = useRouter();
 	const formRef = React.useRef();
 	const inputRef = React.useRef();
+	const captchaRef = React.useRef();
 	const [status, setStatus] = React.useState("idle");
+	const [captchaToken, setCaptchaToken] = React.useState(null);
+
+	const verify = () => {
+		captchaRef.current.getResponse().then((res) => {
+			setCaptchaToken(res);
+		});
+	};
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -40,7 +49,7 @@ function Form() {
 
 	React.useEffect(() => {
 		if (status === "success") {
-			window.setTimeout(() => setStatus("idle"), 5000);
+			window.setTimeout(() => setStatus("idle"), 4000);
 			router.push("/");
 		}
 	}, [status, router]);
@@ -76,13 +85,22 @@ function Form() {
 				<li className={styles.listItem}>
 					<textarea placeholder="Message" name="message" required></textarea>
 				</li>
-				<li className={styles.listItem}>
-					<Button type="submit">
-						{status === "idle" && <>SEND</>}
-						{status === "loading" && <Spinner />}
-						{status === "success" && <>MESSAGE SENT!</>}
-					</Button>
+				<li className={`${styles.listItem} ${styles.recaptcha}`}>
+					<Reaptcha
+						sitekey={process.env.SITE_KEY}
+						ref={captchaRef}
+						onVerify={verify}
+					/>
 				</li>
+				{captchaToken && (
+					<li className={styles.listItem}>
+						<Button type="submit">
+							{status === "idle" && <>SEND</>}
+							{status === "loading" && <Spinner />}
+							{status === "success" && <>MESSAGE SENT!</>}
+						</Button>
+					</li>
+				)}
 			</ul>
 		</form>
 	);

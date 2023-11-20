@@ -11,7 +11,6 @@
 
 .listItem {
 	padding-bottom: 16px;
-	width: 100%;
 	filter: drop-shadow(2px 4px 4px var(--color-gray-900));
 }
 
@@ -39,9 +38,17 @@
 	filter: none;
 }
 
+.recaptcha {
+	filter: none;
+}
+
 @media (max-width: 35rem) {
+	.listItem {
+		width: 300px;
+	}
+
 	.listItem > input,
 	.listItem > textarea {
-		min-width: 350px;
+		min-width: 300px;
 	}
 }
