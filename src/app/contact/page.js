@@ -27,6 +27,7 @@ function Contactpage() {
 					href="https://www.linkedin.com/in/jack-gable/"
 					target="_blank"
 					rel="noreferrer"
+					aria-labelledby="linkedin"
 				>
 					<FontAwesomeIcon icon={faLinkedin} size="3x" />
 					<VisuallyHidden>Visit my profile on LinkedIn</VisuallyHidden>
@@ -36,6 +37,7 @@ function Contactpage() {
 					href="https://github.com/jack-gable"
 					target="_blank"
 					rel="noreferrer"
+					aria-labelledby="github"
 				>
 					<FontAwesomeIcon icon={faGithub} size="3x" />
 					<VisuallyHidden>Visit my profile on Github</VisuallyHidden>

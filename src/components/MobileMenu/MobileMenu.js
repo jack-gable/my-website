@@ -18,7 +18,7 @@ function MobileMenu({ isOpen, setOpen, onDismiss }) {
 	return (
 		<Dialog.Root open={isOpen} onOpenChange={setOpen}>
 			<Dialog.Trigger asChild>
-				<div className={styles.menuBtn}>
+				<div className={styles.menuBtn} role="button" aria-label="menu">
 					<Menu size="1.5rem" />
 					<VisuallyHidden>Open menu</VisuallyHidden>
 				</div>
@@ -39,19 +39,31 @@ function MobileMenu({ isOpen, setOpen, onDismiss }) {
 							<nav className={styles.nav}>
 								<ul className={styles.navList}>
 									<li className={styles.listItem} onClick={onDismiss}>
-										<Link className={styles.navLink} href="/#about">
+										<Link
+											className={styles.navLink}
+											href="/#about"
+											aria-label="about"
+										>
 											<FontAwesomeIcon icon={faUser} size="lg" />
 											<div>ABOUT</div>
 										</Link>
 									</li>
 									<li className={styles.listItem} onClick={onDismiss}>
-										<Link className={styles.navLink} href="/#projects">
+										<Link
+											className={styles.navLink}
+											href="/#projects"
+											aria-label="projects"
+										>
 											<FontAwesomeIcon icon={faLaptopFile} size="lg" />
 											<div>PROJECTS</div>
 										</Link>
 									</li>
 									<li className={styles.listItem} onClick={onDismiss}>
-										<Link className={styles.navLink} href="/contact">
+										<Link
+											className={styles.navLink}
+											href="/contact"
+											aria-label="contact"
+										>
 											<FontAwesomeIcon icon={faEnvelope} size="lg" />
 											<div>CONTACT</div>
 										</Link>
@@ -59,9 +71,10 @@ function MobileMenu({ isOpen, setOpen, onDismiss }) {
 									<li className={styles.listItem} onClick={onDismiss}>
 										<Link
 											className={styles.navLink}
-											href="https://drive.google.com/file/d/1fcBcw-jvcinHyrM9lV2V1xd6layTcBrP/view?usp=sharing"
+											href="https://drive.google.com/file/d/1xTN_QjNX06Xwm0cZ0vhPdVZiEu7rdDrU/view?usp=sharing"
 											target="_blank"
 											type="application/pdf"
+											aria-label="resume"
 										>
 											<FontAwesomeIcon icon={faFilePdf} size="lg" />
 											<div>RESUME</div>

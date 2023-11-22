@@ -15,19 +15,23 @@ function Navigation() {
 		<nav>
 			<ul className={styles.navList}>
 				<li className={styles.listItem}>
-					<Link className={styles.navLink} href="/#about">
+					<Link className={styles.navLink} href="/#about" aria-label="about">
 						<FontAwesomeIcon icon={faUser} size="lg" />
 						<div>ABOUT</div>
 					</Link>
 				</li>
 				<li className={styles.listItem}>
-					<Link className={styles.navLink} href="/#projects">
+					<Link
+						className={styles.navLink}
+						href="/#projects"
+						aria-label="projects"
+					>
 						<FontAwesomeIcon icon={faLaptopFile} size="lg" />
 						<div>PROJECTS</div>
 					</Link>
 				</li>
 				<li className={styles.listItem}>
-					<Link className={styles.navLink} href="/contact">
+					<Link className={styles.navLink} href="/contact" aria-label="contact">
 						<FontAwesomeIcon icon={faEnvelope} size="lg" />
 						<div>CONTACT</div>
 					</Link>
@@ -38,6 +42,7 @@ function Navigation() {
 						href="https://drive.google.com/file/d/1xTN_QjNX06Xwm0cZ0vhPdVZiEu7rdDrU/view?usp=sharing"
 						target="_blank"
 						type="application/pdf"
+						aria-label="resume"
 					>
 						<FontAwesomeIcon icon={faFilePdf} size="lg" />
 						<div>RESUME</div>

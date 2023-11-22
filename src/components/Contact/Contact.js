@@ -11,7 +11,9 @@ function Contact() {
 				Please feel free to reach out if you&apos;re looking for a developer,
 				want to know more about me, or want to connect.
 			</p>
-			<Button href="/contact">CONTACT ME!</Button>
+			<Button href="/contact" aria-label="contact me">
+				CONTACT ME
+			</Button>
 		</div>
 	);
 }

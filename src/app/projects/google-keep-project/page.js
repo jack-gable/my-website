@@ -60,6 +60,7 @@ function GoogleKeeppage() {
 				<Button
 					href="https://google-keep-clone-app.netlify.app"
 					target="_blank"
+					aria-label="view live site"
 				>
 					View Live Site
 				</Button>

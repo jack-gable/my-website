@@ -6,6 +6,7 @@ import styles from "./Form.module.css";
 import Spinner from "../Spinner";
 import { useRouter } from "next/navigation";
 import Reaptcha from "reaptcha";
+import VisuallyHidden from "../VisuallyHidden";
 
 function Form() {
 	const router = useRouter();
@@ -69,21 +70,45 @@ function Form() {
 			<ul className={styles.formList}>
 				<li className={styles.listItem}>
 					<input
+						id="name"
 						ref={inputRef}
 						type="text"
 						name="name"
 						placeholder="Name"
 						required
+						aria-labelledby="name"
+						autoComplete={true}
 					/>
 				</li>
 				<li className={styles.listItem}>
-					<input type="email" name="email" placeholder="Email" required />
+					<input
+						id="email"
+						type="email"
+						name="email"
+						placeholder="Email"
+						required
+						aria-labelledby="email"
+						autoComplete={true}
+					/>
 				</li>
 				<li className={styles.listItem}>
-					<input placeholder="Subject" type="text" name="subject" required />
+					<input
+						id="subject"
+						placeholder="Subject"
+						type="text"
+						name="subject"
+						required
+						aria-labelledby="subject"
+					/>
 				</li>
 				<li className={styles.listItem}>
-					<textarea placeholder="Message" name="message" required></textarea>
+					<textarea
+						id="message"
+						placeholder="Message"
+						name="message"
+						required
+						aria-labelledby="message"
+					></textarea>
 				</li>
 				<li className={`${styles.listItem} ${styles.recaptcha}`}>
 					<Reaptcha
@@ -91,10 +116,11 @@ function Form() {
 						ref={captchaRef}
 						onVerify={verify}
 					/>
+					<VisuallyHidden>recaptcha</VisuallyHidden>
 				</li>
 				{captchaToken && (
 					<li className={styles.listItem}>
-						<Button type="submit">
+						<Button type="submit" aria-label="submit">
 							{status === "idle" && <>SEND</>}
 							{status === "loading" && <Spinner />}
 							{status === "success" && <>MESSAGE SENT!</>}

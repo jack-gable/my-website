@@ -58,6 +58,7 @@ function MovieSearchpage() {
 				<Button
 					href="https://moviesearch-app-react.netlify.app"
 					target="_blank"
+					aria-label="view live site"
 				>
 					View Live Site
 				</Button>

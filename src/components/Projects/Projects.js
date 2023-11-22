@@ -19,7 +19,11 @@ function Projects() {
 					Below are some projects that I&apos;ve built. Check them out on Github
 					or click the links to view the live versions.
 				</p>
-				<Button href="https://github.com/jack-gable" target="_blank">
+				<Button
+					href="https://github.com/jack-gable"
+					target="_blank"
+					aria-label="view my github profile"
+				>
 					View my Github
 				</Button>
 			</div>
@@ -42,6 +46,7 @@ function Projects() {
 						<Link
 							className={styles.projectButton}
 							href="/projects/google-keep-project"
+							aria-label="view project - google app"
 						>
 							VIEW PROJECT{" "}
 							<span className={styles.arrow}>
@@ -68,6 +73,7 @@ function Projects() {
 						<Link
 							className={styles.projectButton}
 							href="/projects/movie-search-project"
+							aria-label="view project - movie app"
 						>
 							VIEW PROJECT{" "}
 							<span className={styles.arrow}>
@@ -94,6 +100,7 @@ function Projects() {
 						<Link
 							className={styles.projectButton}
 							href="/projects/weather-project"
+							aria-label="view project - weather app"
 						>
 							VIEW PROJECT{" "}
 							<span className={styles.arrow}>

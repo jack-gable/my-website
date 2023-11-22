@@ -11,7 +11,7 @@ import {
 import Cookie from "js-cookie";
 
 import Logo from "../Logo";
-import { Sun, Moon, Menu } from "react-feather";
+import { Sun, Moon } from "react-feather";
 
 import styles from "./Header.module.css";
 import MobileMenu from "../MobileMenu";

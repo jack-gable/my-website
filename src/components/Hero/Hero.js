@@ -26,7 +26,9 @@ function Hero() {
 					/>
 				</div>
 				<div className={styles.buttonWrapper}>
-					<Button href="/contact">CONTACT ME</Button>
+					<Button href="/contact" aria-label="contact me">
+						CONTACT ME
+					</Button>
 				</div>
 			</div>
 		</div>

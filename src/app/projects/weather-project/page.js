@@ -54,7 +54,11 @@ function weatherpage() {
 						Netlify
 					</div>
 				</div>
-				<Button href="https://myweather-reactapp.netlify.app" target="_blank">
+				<Button
+					href="https://myweather-reactapp.netlify.app"
+					target="_blank"
+					aria-label="view live site"
+				>
 					View Live Site
 				</Button>
 			</div>
