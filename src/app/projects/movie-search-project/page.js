@@ -19,8 +19,8 @@ function MovieSearchpage() {
 			<p className={styles.desc}>
 				This movie search app is a react application that utilizes the Movie
 				Database API. I built features on top of this project that I had made in
-				a bootcamp course. Some of the new features include using the SWR API
-				and adding favorites section.{" "}
+				a bootcamp course. Some of the new features include adding a favorite
+				movies section.{" "}
 			</p>
 			<h3 className={styles.subtitle}>Tech Stack</h3>
 			<div className={styles.container}>

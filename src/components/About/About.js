@@ -89,10 +89,10 @@ function About() {
 			<div>
 				<h3 className={styles.backgroundTitle}>Get to know Me!</h3>
 				<p className={styles.desc}>
-					My background is in biology and computer science. I have a Bachelors
-					of Science in Biology and a minor in Computer Science from Sonoma
-					State University. When I&apos;m not working on side projects or
-					learning new technologies, I like to play basketball or workout.
+					Some of my favorite tools to use are React and Styled-components. I
+					love learning new things especially new cutting-edge technologies like
+					Next.js. When I&apos;m not working on side projects or learning new
+					technologies, I like to play basketball or workout.
 				</p>
 			</div>
 		</div>
