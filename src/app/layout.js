@@ -8,6 +8,7 @@ import {
 	COLOR_THEME_COOKIE_NAME,
 } from "@/constants";
 import { cookies } from "next/headers";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./styles.css";
 
@@ -38,6 +39,7 @@ function RootLayout({ children }) {
 				<Header initialTheme={theme} />
 				<main>{children}</main>
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);
