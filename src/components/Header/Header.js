@@ -7,14 +7,12 @@ import {
 	DARK_TOKENS,
 	LIGHT_TOKENS,
 } from "@/constants";
-
 import Cookie from "js-cookie";
-
 import Logo from "../Logo";
 import { Sun, Moon } from "react-feather";
-
 import styles from "./Header.module.css";
 import MobileMenu from "../MobileMenu";
+import Boop from "../Boop";
 
 function Header({ initialTheme, ...delegated }) {
 	const [theme, setTheme] = React.useState(initialTheme);
@@ -45,7 +43,15 @@ function Header({ initialTheme, ...delegated }) {
 			</div>
 			<div className={styles.actions}>
 				<button className={styles.themeBtn} onClick={handleToggleTheme}>
-					{theme === "light" ? <Sun size="1.5rem" /> : <Moon size="1.5rem" />}
+					{theme === "light" ? (
+						<Boop rotation={20}>
+							<Sun size="1.5rem" />
+						</Boop>
+					) : (
+						<Boop rotation={20}>
+							<Moon size="1.5rem" />
+						</Boop>
+					)}
 					<VisuallyHidden>Toggle dark / light theme</VisuallyHidden>
 				</button>
 				<MobileMenu
