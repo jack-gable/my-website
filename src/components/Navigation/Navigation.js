@@ -1,52 +1,58 @@
 import React from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faEnvelope,
 	faFilePdf,
 	faLaptopFile,
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
-
 import styles from "./Navigation.module.css";
+import NavLink from "../NavLink";
 
 function Navigation() {
 	return (
 		<nav>
 			<ul className={styles.navList}>
 				<li className={styles.listItem}>
-					<Link className={styles.navLink} href="/#about" aria-label="about">
-						<FontAwesomeIcon icon={faUser} size="lg" />
+					<NavLink
+						className={styles.navLink}
+						href="/#about"
+						aria_label="about"
+						icon={faUser}
+					>
 						<div>ABOUT</div>
-					</Link>
+					</NavLink>
 				</li>
 				<li className={styles.listItem}>
-					<Link
+					<NavLink
 						className={styles.navLink}
 						href="/#projects"
-						aria-label="projects"
+						aria_label="projects"
+						icon={faLaptopFile}
 					>
-						<FontAwesomeIcon icon={faLaptopFile} size="lg" />
 						<div>PROJECTS</div>
-					</Link>
+					</NavLink>
 				</li>
 				<li className={styles.listItem}>
-					<Link className={styles.navLink} href="/contact" aria-label="contact">
-						<FontAwesomeIcon icon={faEnvelope} size="lg" />
+					<NavLink
+						className={styles.navLink}
+						href="/contact"
+						aria_label="contact"
+						icon={faEnvelope}
+					>
 						<div>CONTACT</div>
-					</Link>
+					</NavLink>
 				</li>
 				<li className={styles.listItem}>
-					<Link
+					<NavLink
 						className={styles.navLink}
 						href="https://drive.google.com/file/d/1xTN_QjNX06Xwm0cZ0vhPdVZiEu7rdDrU/view?usp=sharing"
 						target="_blank"
 						type="application/pdf"
 						aria-label="resume"
+						icon={faFilePdf}
 					>
-						<FontAwesomeIcon icon={faFilePdf} size="lg" />
 						<div>RESUME</div>
-					</Link>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
