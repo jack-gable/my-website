@@ -10,6 +10,36 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Projects.module.css";
 
+const PROJECTS = [
+	{
+		image: notesApp1,
+		alt: "A notes app clone of Google Keep.",
+		title: "Google Keep Clone",
+		description:
+			"A small version of the Google Keep notes app. It's a simple and minimalistic approach to the very popular note taking app.",
+		href: "/projects/google-keep-project",
+		ariaLabel: "view project - google app",
+	},
+	{
+		image: movieSearch1,
+		alt: "A movie search app",
+		title: "Movie Search App",
+		description:
+			"A web application for users to browse their favorite movies based on movie title search.",
+		href: "/projects/movie-search-project",
+		ariaLabel: "view project - movie app",
+	},
+	{
+		image: weatherApp1,
+		alt: "A weather app",
+		title: "MyWeather App",
+		description:
+			"Developed a web application that shows the user the weather based on a user location input.",
+		href: "/projects/weather-project",
+		ariaLabel: "view project - weather app",
+	},
+];
+
 function Projects() {
 	return (
 		<div className={styles.wrapper} id="projects">
@@ -28,87 +58,32 @@ function Projects() {
 				</Button>
 			</div>
 			<div className={styles.projectsContainer}>
-				<article className={styles.project}>
-					<Image
-						className={styles.projectImage}
-						src={notesApp1}
-						alt="A notes app clone of Google Keep."
-						loading="lazy"
-					/>
-					<div className={styles.container}>
-						<div>
-							<h3 className={styles.projectTitle}>Google Keep Clone</h3>
-							<p>
-								A small version of the Google Keep notes app. It&apos;s a simple
-								and minimalistic approach to the very popular note taking app.
-							</p>
+				{PROJECTS.map(({ image, alt, title, description, href, ariaLabel }) => (
+					<article key={title} className={styles.project}>
+						<Image
+							className={styles.projectImage}
+							src={image}
+							alt={alt}
+							loading="lazy"
+						/>
+						<div className={styles.container}>
+							<div>
+								<h3 className={styles.projectTitle}>{title}</h3>
+								<p>{description}</p>
+							</div>
+							<Link
+								className={styles.projectButton}
+								href={href}
+								aria-label={ariaLabel}
+							>
+								VIEW PROJECT{" "}
+								<span className={styles.arrow}>
+									<FontAwesomeIcon icon={faArrowRight} />
+								</span>
+							</Link>
 						</div>
-						<Link
-							className={styles.projectButton}
-							href="/projects/google-keep-project"
-							aria-label="view project - google app"
-						>
-							VIEW PROJECT{" "}
-							<span className={styles.arrow}>
-								<FontAwesomeIcon icon={faArrowRight} />
-							</span>
-						</Link>
-					</div>
-				</article>
-				<article className={styles.project}>
-					<Image
-						className={styles.projectImage}
-						src={movieSearch1}
-						alt="A movie search app"
-						loading="lazy"
-					/>
-					<div className={styles.container}>
-						<div>
-							<h3 className={styles.projectTitle}>Movie Search App</h3>
-							<p>
-								A web application for users to browse their favorite movies
-								based on movie title search.
-							</p>
-						</div>
-						<Link
-							className={styles.projectButton}
-							href="/projects/movie-search-project"
-							aria-label="view project - movie app"
-						>
-							VIEW PROJECT{" "}
-							<span className={styles.arrow}>
-								<FontAwesomeIcon icon={faArrowRight} />
-							</span>
-						</Link>
-					</div>
-				</article>
-				<article className={styles.project}>
-					<Image
-						className={styles.projectImage}
-						src={weatherApp1}
-						alt="A weather app"
-						loading="lazy"
-					/>
-					<div className={styles.container}>
-						<div>
-							<h3 className={styles.projectTitle}>MyWeather App</h3>
-							<p>
-								Developed a web application that shows the user the weather
-								based on a user location input.
-							</p>
-						</div>
-						<Link
-							className={styles.projectButton}
-							href="/projects/weather-project"
-							aria-label="view project - weather app"
-						>
-							VIEW PROJECT{" "}
-							<span className={styles.arrow}>
-								<FontAwesomeIcon icon={faArrowRight} />
-							</span>
-						</Link>
-					</div>
-				</article>
+					</article>
+				))}
 			</div>
 		</div>
 	);

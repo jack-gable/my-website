@@ -86,6 +86,10 @@
 	font-weight: 600;
 }
 
+.projectButton:hover {
+	text-underline-offset: 0.28em;
+}
+
 .projectButton:hover .arrow {
 	transform: translateX(4px);
 }
