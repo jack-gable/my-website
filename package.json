@@ -13,8 +13,6 @@
 		"@fortawesome/free-brands-svg-icons": "^6.4.0",
 		"@fortawesome/free-solid-svg-icons": "^6.4.0",
 		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@radix-ui/react-dialog": "^1.0.5",
-		"@radix-ui/react-separator": "^1.0.3",
 		"@vercel/analytics": "^1.1.1",
 		"eslint-config-next": "13.4.9",
 		"framer-motion": "^10.12.21",

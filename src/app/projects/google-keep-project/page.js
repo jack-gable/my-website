@@ -58,7 +58,7 @@ function GoogleKeeppage() {
 					</div>
 				</div>
 				<Button
-					href="https://google-keep-clone-app.netlify.app"
+					href="https://google-keep-notes-app.netlify.app"
 					target="_blank"
 					aria-label="view live site"
 				>
