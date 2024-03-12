@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { animated } from "react-spring";
+import { animated } from "@react-spring/web";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useBoop from "@/app/hooks/use-boop";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { animated } from "react-spring";
+import { animated } from "@react-spring/web";
 import useBoop from "@/app/hooks/use-boop";
 
 function Boop({ children, ...boopConfig }) {

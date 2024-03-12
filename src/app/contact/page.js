@@ -29,7 +29,8 @@ function Contactpage() {
 					rel="noreferrer"
 					aria-labelledby="linkedin"
 				>
-					<FontAwesomeIcon icon={faLinkedin} size="3x" />
+					LinkedIn
+					<FontAwesomeIcon icon={faLinkedin} size="xl" />
 					<VisuallyHidden>Visit my profile on LinkedIn</VisuallyHidden>
 				</Link>
 				<Link
@@ -39,7 +40,8 @@ function Contactpage() {
 					rel="noreferrer"
 					aria-labelledby="github"
 				>
-					<FontAwesomeIcon icon={faGithub} size="3x" />
+					Github
+					<FontAwesomeIcon icon={faGithub} size="xl" />
 					<VisuallyHidden>Visit my profile on Github</VisuallyHidden>
 				</Link>
 			</div>

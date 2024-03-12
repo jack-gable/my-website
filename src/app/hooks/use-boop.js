@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring } from "react-spring";
+import { useSpring } from "@react-spring/web";
 import usePrefersReducedMotion from "./use-prefers-reduced-motion";
 
 function useBoop({
@@ -10,7 +10,7 @@ function useBoop({
 	timing = 150,
 	springConfig = {
 		tension: 300,
-		friction: 10,
+		friction: 25,
 	},
 }) {
 	const prefersReducedMotion = usePrefersReducedMotion();

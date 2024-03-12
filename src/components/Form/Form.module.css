@@ -11,7 +11,7 @@
 
 .listItem {
 	padding-bottom: 16px;
-	filter: drop-shadow(2px 4px 4px var(--color-gray-900));
+	/* filter: drop-shadow(2px 4px 4px var(--color-gray-900)); */
 }
 
 .listItem > input,
@@ -19,14 +19,15 @@
 	border: none;
 	border-radius: 10px;
 	background-color: var(--color-gray-900);
-	color: black;
+	color: var(--color-gray-0);
 	min-width: 400px;
 	line-height: 1.6;
 	padding: 6px 8px;
 }
 
 .listItem::placeholder {
-	color: var(--color-gray-300);
+	color: var(--color-gray-0);
+	font-weight: 500;
 }
 
 .listItem > textarea {
