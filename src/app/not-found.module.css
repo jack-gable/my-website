@@ -1,6 +1,9 @@
 .wrapper {
 	padding-top: 96px;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .wrapper h1 {
@@ -9,4 +12,8 @@
 
 .wrapper p {
 	margin-bottom: 3em;
+}
+
+.peep {
+	filter: drop-shadow(2px 4px 8px var(--color-decorative-500));
 }

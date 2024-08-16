@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> renders the <Navigation /> component with text 1`] = `
+<nav>
+  <ul
+    class="navList"
+  >
+    <li
+      class="listItem"
+    >
+      <a
+        aria_label="about"
+        class="navLink"
+        href="/about"
+      >
+        ABOUT
+      </a>
+    </li>
+    <li
+      class="listItem"
+    >
+      <a
+        aria_label="projects"
+        class="navLink"
+        href="/projects"
+      >
+        PROJECTS
+      </a>
+    </li>
+    <li
+      class="listItem"
+    >
+      <a
+        aria_label="contact"
+        class="navLink"
+        href="/contact"
+      >
+        CONTACT
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

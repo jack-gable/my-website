@@ -1,17 +1,18 @@
 import React from "react";
 import Link from "next/link";
-
 import styles from "./Button.module.css";
 
-function Button({ href, children, ...delegated }) {
-	const Tag = typeof href === "string" ? Link : "button";
+const Button = ({ title, icon, position, href, ...rest }) => {
 	return (
-		<div className={styles.wrapper}>
-			<Tag className={styles.pushable} href={href} {...delegated}>
-				<span className={styles.front}>{children}</span>
-			</Tag>
-		</div>
+		<Link href={href} className={styles.btn} {...rest}>
+			<span className={styles.textWrapper} />
+			<span className={styles.text}>
+				{position === "left" && icon}
+				{title}
+				{position === "right" && icon}
+			</span>
+		</Link>
 	);
-}
+};
 
 export default Button;

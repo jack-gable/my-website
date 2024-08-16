@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileMenu /> renders the <MobileMenu /> component with text 1`] = `
+<div
+  aria-controls="radix-:r0:"
+  aria-expanded="true"
+  aria-haspopup="dialog"
+  aria-label="menu"
+  class="menuBtn"
+  data-state="open"
+  role="button"
+  type="button"
+>
+  <svg
+    fill="none"
+    height="1.5rem"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="1.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="3"
+      x2="21"
+      y1="12"
+      y2="12"
+    />
+    <line
+      x1="3"
+      x2="21"
+      y1="6"
+      y2="6"
+    />
+    <line
+      x1="3"
+      x2="21"
+      y1="18"
+      y2="18"
+    />
+  </svg>
+  <div
+    class="wrapper"
+  >
+    Open menu
+  </div>
+</div>
+`;

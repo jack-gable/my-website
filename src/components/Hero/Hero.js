@@ -1,20 +1,54 @@
 "use client";
 import React from "react";
-import Button from "../Button";
 import peep from "../../../public/assests/img/peep-46.svg";
 import Image from "next/image";
-
 import styles from "./Hero.module.css";
+import Link from "next/link";
+import { FiArrowRight as Arrow } from "react-icons/fi";
+import TypewriterEffect from "../Typewriter";
+
+const words = [
+	{
+		text: "Hi",
+	},
+	{
+		text: "I'm",
+	},
+	{
+		text: "Jack",
+	},
+	{
+		text: "Gable",
+	},
+];
 
 function Hero() {
 	return (
 		<div className={styles.wrapper}>
 			<div>
 				<div className={styles.flexWrapper}>
-					<div>
-						<p>Hi, my name&apos;s</p>
-						<h1 className={styles.title}>Jack Gable</h1>
-						<h2>Web Developer | Front-End Engineer</h2>
+					<div className={styles.container}>
+						<TypewriterEffect words={words} />
+						<p style={{ margin: 0 }}>
+							I&apos;m a developer and tech enthusiast based in
+							California.
+						</p>
+						<div
+							className={`${styles.linksWrapper} ${styles.paddingTop}`}
+						>
+							<Link href="/projects" className={styles.link}>
+								view my projects
+								<span className={styles.arrow}>
+									<Arrow strokeWidth={3} />
+								</span>
+							</Link>
+							<Link href="/contact" className={styles.link}>
+								Contact Me
+								<span className={styles.arrow}>
+									<Arrow strokeWidth={3} />
+								</span>
+							</Link>
+						</div>
 					</div>
 					<Image
 						className={styles.peep}
@@ -23,12 +57,8 @@ function Hero() {
 						height={300}
 						width={200}
 						priority={true}
+						data-testid="hero-peep"
 					/>
-				</div>
-				<div className={styles.buttonWrapper}>
-					<Button href="/contact" aria-label="contact me">
-						CONTACT ME
-					</Button>
 				</div>
 			</div>
 		</div>

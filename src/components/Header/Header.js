@@ -9,7 +9,7 @@ import {
 } from "@/constants";
 import Cookie from "js-cookie";
 import Logo from "../Logo";
-import { Sun, Moon } from "react-feather";
+import { FiMoon as Moon, FiSun as Sun } from "react-icons/fi";
 import styles from "./Header.module.css";
 import MobileMenu from "../MobileMenu";
 import Boop from "../Boop";
@@ -38,27 +38,34 @@ function Header({ initialTheme, ...delegated }) {
 	return (
 		<header className={styles.wrapper} {...delegated}>
 			<Logo />
-			<div className={styles.desktopNav}>
-				<Navigation />
-			</div>
-			<div className={styles.actions}>
-				<button className={styles.themeBtn} onClick={handleToggleTheme}>
-					{theme === "light" ? (
-						<Boop rotation={20}>
-							<Sun size="1.5rem" />
-						</Boop>
-					) : (
-						<Boop rotation={20}>
-							<Moon size="1.5rem" />
-						</Boop>
-					)}
-					<VisuallyHidden>Toggle dark / light theme</VisuallyHidden>
-				</button>
-				<MobileMenu
-					isOpen={showMobileMenu}
-					setOpen={setShowMobileMenu}
-					onDismiss={() => setShowMobileMenu(false)}
-				/>
+			<div className={styles.container}>
+				<div className={styles.desktopNav}>
+					<Navigation />
+				</div>
+				<div className={styles.actions}>
+					<button
+						className={styles.themeBtn}
+						onClick={handleToggleTheme}
+					>
+						{theme === "light" ? (
+							<Boop rotation={20}>
+								<Sun size="1.5rem" />
+							</Boop>
+						) : (
+							<Boop rotation={20}>
+								<Moon size="1.5rem" />
+							</Boop>
+						)}
+						<VisuallyHidden>
+							Toggle dark / light theme
+						</VisuallyHidden>
+					</button>
+					<MobileMenu
+						isOpen={showMobileMenu}
+						setOpen={setShowMobileMenu}
+						onDismiss={() => setShowMobileMenu(false)}
+					/>
+				</div>
 			</div>
 		</header>
 	);

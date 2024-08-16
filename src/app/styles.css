@@ -82,9 +82,9 @@ h6 {
 	background-image: none !important;
 	-webkit-text-fill-color: var(--color-selection-text) !important;
 	-moz-text-fill-color: var(--color-selection-text) !important;
-	background-image: none !important;
 	background-clip: revert !important;
 	-webkit-background-clip: revert !important;
+	-moz-background-clip: revert !important;
 	text-shadow: none !important;
 }
 
@@ -97,11 +97,9 @@ html {
 
 body {
 	min-height: 100vh;
-	min-height: 100svh;
 	display: flex;
 	flex-direction: column;
 	background: var(--color-backdrop);
-	border-bottom: 3px solid var(--color-decorative-600);
 }
 
 body::before {

@@ -1,35 +1,63 @@
-.wrapper {
-	display: flex;
-	justify-content: center;
+.btn {
+	position: relative;
+	display: inline-block;
+	height: 3rem;
+	width: 10rem;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	padding: 1px;
 }
 
-.front {
-	display: block;
-	padding: 12px 42px;
-	border-radius: 12px;
-	font-size: 1.25rem;
-	background: var(--color-primary-500);
-	color: var(--color-text);
-	transform: translateY(-4px);
-	transition: transform 500ms;
+.btn:focus {
+	outline: none;
 }
 
-.pushable {
-	background: var(--color-primary-700);
-	border: none;
-	border-radius: 12px;
-	padding: 0;
+.textWrapper {
+	position: absolute;
+	inset: -1000%;
+	animation: spin 2s linear infinite;
+	background-image: conic-gradient(
+		from 90deg at 50% 50%,
+		#e2cbff 0%,
+		#393bb2 50%,
+		#e2cbff 100%
+	);
+}
+
+.text {
+	display: inline-flex;
+	height: 100%;
+	width: 100%;
 	cursor: pointer;
-	text-decoration: none;
-	font-weight: 600;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	background-color: var(--color-gray-0);
+	padding: 0.75rem 0.25rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 500;
+	color: var(--color-text);
+	backdrop-filter: blur(64px);
+	gap: 0.5rem;
 }
 
-.pushable:hover .front {
-	transform: translateY(-6px);
-	transition: transform 250ms;
+.text:hover,
+.text:focus {
+	color: var(--color-primary-300);
 }
 
-.pushable:active .front {
-	transform: translateY(-2px);
-	transition: transform 50ms;
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 35rem) {
+	.btn {
+		width: 100%;
+	}
 }

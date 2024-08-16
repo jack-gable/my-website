@@ -3,14 +3,7 @@ import React from "react";
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import VisuallyHidden from "../VisuallyHidden";
-import { Menu, X } from "react-feather";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faEnvelope,
-	faFilePdf,
-	faLaptopFile,
-	faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { FiMenu as Menu, FiX as X } from "react-icons/fi";
 
 import styles from "./MobileMenu.module.css";
 
@@ -32,52 +25,74 @@ function MobileMenu({ isOpen, setOpen, onDismiss }) {
 							<Dialog.Close asChild>
 								<div className={styles.closeBtn}>
 									<X size="2.2rem" />
-									<VisuallyHidden>Dismiss menu</VisuallyHidden>
+									<VisuallyHidden>
+										Dismiss menu
+									</VisuallyHidden>
 								</div>
 							</Dialog.Close>
 
 							<nav className={styles.nav}>
 								<ul className={styles.navList}>
-									<li className={styles.listItem} onClick={onDismiss}>
+									<li
+										className={styles.listItem}
+										onClick={onDismiss}
+									>
 										<Link
 											className={styles.navLink}
-											href="/#about"
+											href="/about"
 											aria-label="about"
 										>
-											<FontAwesomeIcon icon={faUser} size="lg" />
 											<div>ABOUT</div>
 										</Link>
 									</li>
-									<li className={styles.listItem} onClick={onDismiss}>
+									<li
+										className={styles.listItem}
+										onClick={onDismiss}
+									>
 										<Link
 											className={styles.navLink}
-											href="/#projects"
+											href="/projects"
 											aria-label="projects"
 										>
-											<FontAwesomeIcon icon={faLaptopFile} size="lg" />
 											<div>PROJECTS</div>
 										</Link>
 									</li>
-									<li className={styles.listItem} onClick={onDismiss}>
+									<li
+										className={styles.listItem}
+										onClick={onDismiss}
+									>
 										<Link
 											className={styles.navLink}
 											href="/contact"
 											aria-label="contact"
 										>
-											<FontAwesomeIcon icon={faEnvelope} size="lg" />
 											<div>CONTACT</div>
 										</Link>
 									</li>
-									<li className={styles.listItem} onClick={onDismiss}>
+									<li
+										className={styles.listItem}
+										onClick={onDismiss}
+									>
 										<Link
 											className={styles.navLink}
-											href="https://drive.google.com/file/d/1xTN_QjNX06Xwm0cZ0vhPdVZiEu7rdDrU/view?usp=sharing"
+											href="https://www.linkedin.com/in/jack-gable/"
 											target="_blank"
-											type="application/pdf"
-											aria-label="resume"
+											rel="noreferrer"
 										>
-											<FontAwesomeIcon icon={faFilePdf} size="lg" />
-											<div>RESUME</div>
+											<div>LINKEDIN</div>
+										</Link>
+									</li>
+									<li
+										className={styles.listItem}
+										onClick={onDismiss}
+									>
+										<Link
+											className={styles.navLink}
+											href="https://github.com/jack-gable"
+											target="_blank"
+											rel="noreferrer"
+										>
+											<div>GITHUB</div>
 										</Link>
 									</li>
 								</ul>

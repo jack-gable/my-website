@@ -1,0 +1,26 @@
+.inline {
+	display: inline;
+}
+.inlineBlock {
+	display: inline-block;
+}
+
+.word {
+	color: var(--color-gray-1000);
+	opacity: 0;
+	display: none;
+	font-size: 32px;
+	letter-spacing: 0.05em;
+}
+
+.wordWrapper {
+	font-weight: bold;
+}
+
+.cursor {
+	display: inline-block;
+	border-radius: 0.125rem;
+	width: 4px;
+	height: 2.5rem;
+	background-color: var(--color-primary);
+}

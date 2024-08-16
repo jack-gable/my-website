@@ -1,12 +1,15 @@
 import React from "react";
 import { PORTFOLIO_TITLE } from "@/constants";
-
 import styles from "./Footer.module.css";
+import Socials from "../Socials";
 
 function Footer() {
 	return (
-		<footer>
-			<div className={styles.wrapper}>&copy; 2023 - {PORTFOLIO_TITLE}</div>
+		<footer className={styles.wrapper}>
+			<p className={styles.copyright}>&copy; 2024 {PORTFOLIO_TITLE}</p>
+			<div>
+				<Socials />
+			</div>
 		</footer>
 	);
 }

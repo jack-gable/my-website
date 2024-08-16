@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> renders the <Hero /> component with text 1`] = `
+<div
+  class="wrapper"
+>
+  <div>
+    <div
+      class="flexWrapper"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="wordWrapper"
+        >
+          <div
+            class="inline"
+          >
+            <div
+              class="inlineBlock"
+            >
+              <span
+                class="word"
+              >
+                H
+              </span>
+              <span
+                class="word"
+              >
+                i
+              </span>
+               
+            </div>
+            <div
+              class="inlineBlock"
+            >
+              <span
+                class="word"
+              >
+                I
+              </span>
+              <span
+                class="word"
+              >
+                '
+              </span>
+              <span
+                class="word"
+              >
+                m
+              </span>
+               
+            </div>
+            <div
+              class="inlineBlock"
+            >
+              <span
+                class="word"
+              >
+                J
+              </span>
+              <span
+                class="word"
+              >
+                a
+              </span>
+              <span
+                class="word"
+              >
+                c
+              </span>
+              <span
+                class="word"
+              >
+                k
+              </span>
+               
+            </div>
+            <div
+              class="inlineBlock"
+            >
+              <span
+                class="word"
+              >
+                G
+              </span>
+              <span
+                class="word"
+              >
+                a
+              </span>
+              <span
+                class="word"
+              >
+                b
+              </span>
+              <span
+                class="word"
+              >
+                l
+              </span>
+              <span
+                class="word"
+              >
+                e
+              </span>
+               
+            </div>
+          </div>
+          <span
+            class="cursor"
+            style="opacity: 0;"
+          />
+        </div>
+        <p
+          style="margin: 0px;"
+        >
+          I'm a developer and tech enthusiast based in California.
+        </p>
+        <div
+          class="linksWrapper paddingTop"
+        >
+          <a
+            class="link"
+            href="/projects"
+          >
+            view my projects
+            <span
+              class="arrow"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+                <polyline
+                  points="12 5 19 12 12 19"
+                />
+              </svg>
+            </span>
+          </a>
+          <a
+            class="link"
+            href="/contact"
+          >
+            Contact Me
+            <span
+              class="arrow"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+                <polyline
+                  points="12 5 19 12 12 19"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <img
+        alt=""
+        class="peep"
+        data-nimg="1"
+        data-testid="hero-peep"
+        decoding="async"
+        fetchpriority="high"
+        height="300"
+        src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+        style="color: transparent;"
+        width="200"
+      />
+    </div>
+  </div>
+</div>
+`;

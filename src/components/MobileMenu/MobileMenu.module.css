@@ -23,7 +23,11 @@
 .content {
 	--overfill: 16px;
 	position: relative;
-	background: var(--color-gray-0);
+	background: linear-gradient(
+		to right,
+		var(--color-backdrop),
+		var(--color-backdrop-highlight)
+	);
 	width: calc(450px + var(--overfill));
 	height: 100%;
 	margin-right: calc(var(--overfill) * -1);
@@ -63,6 +67,7 @@
 	padding: 0;
 	list-style-type: none;
 	flex-direction: column;
+	align-items: center;
 }
 
 .listItem {
@@ -70,7 +75,6 @@
 }
 
 .navLink {
-	display: block;
 	border: none;
 	background: transparent;
 	cursor: pointer;

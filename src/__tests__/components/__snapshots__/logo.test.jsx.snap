@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> renders the <Logo /> component with text 1`] = `
+<a
+  class="wrapper"
+  data-mobile-alignment="left"
+  href="/"
+>
+  <div
+    class="className logo"
+  >
+    JG
+  </div>
+</a>
+`;

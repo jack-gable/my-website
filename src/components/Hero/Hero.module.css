@@ -12,8 +12,32 @@
 	font-size: 3.5rem;
 }
 
-.buttonWrapper {
-	margin: 32px 0;
+.linksWrapper {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.arrow {
+	display: inline-block;
+	color: var(--color-primary);
+	transition: transform 200ms;
+}
+
+.link {
+	font-weight: 600;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.link:hover {
+	text-underline-offset: 0.4em;
+}
+
+.link:hover .arrow {
+	transform: translateX(6px);
 }
 
 .flexWrapper {
@@ -26,6 +50,10 @@
 	filter: drop-shadow(2px 4px 8px var(--color-decorative-500));
 }
 
+.paddingTop {
+	padding-top: 24px;
+}
+
 @media (max-width: 35rem) {
 	.wrapper {
 		padding: 6rem 0;
@@ -33,5 +61,20 @@
 
 	.flexWrapper {
 		flex-direction: column;
+	}
+
+	.container {
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+	}
+
+	.link {
+		font-size: 0.8rem;
+	}
+
+	.linksWrapper {
+		width: 100%;
+		justify-content: revert;
+		gap: 2rem;
 	}
 }

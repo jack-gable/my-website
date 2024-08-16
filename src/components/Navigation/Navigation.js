@@ -1,45 +1,37 @@
 import React from "react";
-import {
-	faEnvelope,
-	faLaptopFile,
-	faUser,
-} from "@fortawesome/free-solid-svg-icons";
 import styles from "./Navigation.module.css";
-import NavLink from "../NavLink";
+import Link from "next/link";
 
 function Navigation() {
 	return (
 		<nav>
 			<ul className={styles.navList}>
 				<li className={styles.listItem}>
-					<NavLink
+					<Link
 						className={styles.navLink}
-						href="/#about"
+						href="/about"
 						aria_label="about"
-						icon={faUser}
 					>
-						<div>ABOUT</div>
-					</NavLink>
+						ABOUT
+					</Link>
 				</li>
 				<li className={styles.listItem}>
-					<NavLink
+					<Link
 						className={styles.navLink}
-						href="/#projects"
+						href="/projects"
 						aria_label="projects"
-						icon={faLaptopFile}
 					>
-						<div>PROJECTS</div>
-					</NavLink>
+						PROJECTS
+					</Link>
 				</li>
 				<li className={styles.listItem}>
-					<NavLink
+					<Link
 						className={styles.navLink}
 						href="/contact"
 						aria_label="contact"
-						icon={faEnvelope}
 					>
-						<div>CONTACT</div>
-					</NavLink>
+						CONTACT
+					</Link>
 				</li>
 			</ul>
 		</nav>

@@ -1,52 +1,66 @@
 import React from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import VisuallyHidden from "@/components/VisuallyHidden";
-
 import styles from "./contactpage.module.css";
 import { PORTFOLIO_TITLE } from "@/constants";
-import Form from "@/components/Form";
+import TypewriterEffect from "@/components/Typewriter";
+import { FiMail } from "react-icons/fi";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import Image from "next/image";
+import sittingPeep from "../../../public/assests/img/peep-sitting.svg";
+import Button from "@/components/Button";
 
 export const metadata = {
-	title: `Contact Me • ${PORTFOLIO_TITLE}`,
+	title: `Contact • ${PORTFOLIO_TITLE}`,
 };
+
+const words = [
+	{
+		text: "Contact",
+	},
+	{
+		text: "Me",
+	},
+];
 
 function Contactpage() {
 	return (
 		<div className={styles.wrapper}>
-			<h1 className={styles.title}>Contact Me</h1>
-			<p>
-				Please reach out to me if you have any questions! Shoot me a message if
-				you want to find out more about me or the projects I am working on. Find
-				me on LinkedIn or view my Github.
+			<TypewriterEffect words={words} />
+			<p className={styles.contactText}>
+				Feel free to reach out to me! Shoot me a email if you want to
+				find out more about me or would like to work on something
+				together. Find me on LinkedIn and Github too!
 			</p>
 			<div className={styles.socials}>
-				<Link
-					className={styles.socialsLink}
+				<Button
+					title="LinkedIn"
+					icon={<FaLinkedin />}
+					position="right"
 					href="https://www.linkedin.com/in/jack-gable/"
 					target="_blank"
 					rel="noreferrer"
-					aria-labelledby="linkedin"
-				>
-					LinkedIn
-					<FontAwesomeIcon icon={faLinkedin} size="xl" />
-					<VisuallyHidden>Visit my profile on LinkedIn</VisuallyHidden>
-				</Link>
-				<Link
-					className={styles.socialsLink}
+				/>
+				<Button
+					title="Github"
+					icon={<FaGithub />}
+					position="right"
 					href="https://github.com/jack-gable"
 					target="_blank"
 					rel="noreferrer"
-					aria-labelledby="github"
-				>
-					Github
-					<FontAwesomeIcon icon={faGithub} size="xl" />
-					<VisuallyHidden>Visit my profile on Github</VisuallyHidden>
-				</Link>
+				/>
+				<Button
+					title="Email Me"
+					icon={<FiMail />}
+					position="right"
+					href="mailto:jackgable13@gmail.com"
+				/>
 			</div>
-
-			<Form />
+			<Image
+				src={sittingPeep}
+				alt=""
+				height={300}
+				width={200}
+				className={styles.peep}
+			/>
 		</div>
 	);
 }
