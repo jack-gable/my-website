@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import TypewriterEffect from "@/components/Typewriter";
-import styles from "./projects.module.css";
+import styles from "./Projects.module.css";
 import { projectsData } from "@/projectData";
 import ProjectsCard from "@/components/ProjectsCard";
 import { stagger, useAnimate, useInView } from "framer-motion";
