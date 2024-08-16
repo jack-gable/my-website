@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect } from "react";
 import TypewriterEffect from "@/components/Typewriter";
 import styles from "./projects.module.css";
