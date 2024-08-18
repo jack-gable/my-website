@@ -1,6 +1,6 @@
 .wrapper {
 	border-radius: 1rem;
-	height: 15rem;
+	height: 16rem;
 	width: 100%;
 	overflow: hidden;
 	background-color: #444;
@@ -50,6 +50,7 @@
 	border-radius: 0.5rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	border: 1px solid var(--color-gray-1000);
 }
 
 .link:hover,

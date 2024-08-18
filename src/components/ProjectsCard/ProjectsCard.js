@@ -42,9 +42,11 @@ function ProjectsCard({
 					<Link href={githubLink} className={styles.link}>
 						Code
 					</Link>
-					<Link href={liveLink} className={styles.link}>
-						Live
-					</Link>
+					{liveLink && (
+						<Link href={liveLink} className={styles.link}>
+							Live
+						</Link>
+					)}
 				</div>
 			</div>
 		</motion.div>
