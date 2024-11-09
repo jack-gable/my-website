@@ -23,7 +23,7 @@ export const projectsCardData = [
   },
   {
     id: 2,
-    title: "TODOApp",
+    title: "Todo App",
     desc: "A fully functional todo list app with theme switcher.",
     techStack: ["react", "styledcomponents", "vite"],
     icon: "todo",
@@ -61,7 +61,7 @@ export const projectsPageData = [
   {
     id: 2,
     slug: "todoapp",
-    title: "TODO App",
+    title: "Todo App",
     desc: "A fully functional todo list app with a dark/light theme switcher. The app allows users to add, edit, and delete tasks. The app utilizes the localStorage API to save and retrieve data. The app is built with React and Styled Components.",
     techStack: ["react", "styledcomponents", "vite", "netlify"],
     links: {
