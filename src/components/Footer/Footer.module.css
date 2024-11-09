@@ -1,17 +1,17 @@
 .wrapper {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	padding-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
 .copyright {
-	margin: 0;
-	font-size: 0.8rem;
+  margin: 0;
+  font-size: 1rem;
 }
 
 @media (max-width: 35rem) {
-	.wrapper {
-		padding-bottom: 64px;
-	}
+  .wrapper {
+    padding-bottom: 64px;
+  }
 }

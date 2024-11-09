@@ -1,58 +1,30 @@
 "use client";
-import React, { useEffect } from "react";
-import TypewriterEffect from "@/components/Typewriter";
+import React from "react";
 import styles from "./Projects.module.css";
-import { projectsData } from "@/projectData";
+import { projectsCardData } from "@/projectData";
 import ProjectsCard from "@/components/ProjectsCard";
-import { stagger, useAnimate, useInView } from "framer-motion";
-
-const words = [
-	{
-		text: "Projects",
-	},
-];
+import Title from "../Title";
 
 const Projects = () => {
-	const [scope, animate] = useAnimate();
-	const isInView = useInView(scope);
-
-	useEffect(() => {
-		if (isInView) {
-			animate(
-				"div",
-				{
-					opacity: 1,
-					scale: 1,
-					filter: "blur(0px)",
-				},
-				{
-					duration: 0.6,
-					delay: stagger(0.2, { startDelay: 0.15 }),
-				}
-			);
-		}
-	}, [isInView, animate]);
-
-	return (
-		<div className={styles.wrapper}>
-			<TypewriterEffect words={words} />
-			<div ref={scope} className={styles.projectsContainer}>
-				{projectsData.map(
-					({ id, title, icon, github, live, desc, img }) => (
-						<ProjectsCard
-							key={id}
-							title={title}
-							icon={icon}
-							githubLink={github}
-							liveLink={live}
-							desc={desc}
-							backgroundImage={img}
-						/>
-					)
-				)}
-			</div>
-		</div>
-	);
+  return (
+    <section id="projects" className={styles.wrapper}>
+      <div className={styles.container}>
+        <div className={styles.projectsContainer}>
+          <Title heading="h2" title="Projects" />
+          <p className={styles.projectText}>
+            I like to stay busy and always have a project in the works. Take a
+            look at some of the applications that I&apos;ve dedicated my time
+            to.
+          </p>
+        </div>
+        <div className={styles.projects}>
+          {projectsCardData.map((project) => (
+            <ProjectsCard key={project.id} {...project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Projects;

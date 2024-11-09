@@ -1,37 +1,37 @@
 .navList {
-	display: flex;
-	gap: 12px;
-	padding: 0;
-	list-style-type: none;
-	flex-direction: column;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  list-style-type: none;
+  flex-direction: column;
 }
 
 .listItem {
-	position: relative;
+  position: relative;
 }
 
 .navLink {
-	border: none;
-	background: transparent;
-	cursor: pointer;
-	border-radius: 12px;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	position: relative;
-	padding: 6px 10px;
-	text-decoration: none;
-	color: var(--color-text);
-	transition: background 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background 200ms;
 }
 
 .navLink:hover,
 .navLink:focus {
-	background: var(--color-decorative-100);
+  background: var(--color-decorative-100);
 }
 
 @media (min-width: 35rem) {
-	.navList {
-		flex-direction: row;
-	}
+  .navList {
+    flex-direction: row;
+  }
 }

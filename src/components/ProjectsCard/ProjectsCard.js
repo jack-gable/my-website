@@ -1,56 +1,43 @@
-"use client";
-
 import React from "react";
 import styles from "./ProjectsCard.module.css";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { FiArrowRight as Arrow } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import Icon from "../Icon";
 
-function ProjectsCard({
-	title,
-	icon,
-	githubLink,
-	liveLink,
-	desc,
-	backgroundImage,
-}) {
-	return (
-		<motion.div
-			className={styles.wrapper}
-			initial={{
-				opacity: 0,
-				scale: 0.3,
-				filter: "blur(20px)",
-			}}
-		>
-			<Image
-				src={backgroundImage}
-				alt=""
-				width={1000}
-				height={1000}
-				className={styles.image}
-			/>
-			<div className={styles.content}>
-				<div className={styles.container}>
-					<h4 className={styles.title}>
-						<span>{icon}</span>
-						{title}
-					</h4>
-					<p className={styles.description}>{desc}</p>
-				</div>
-				<div className={styles.linkContainer}>
-					<Link href={githubLink} className={styles.link}>
-						Code
-					</Link>
-					{liveLink && (
-						<Link href={liveLink} className={styles.link}>
-							Live
-						</Link>
-					)}
-				</div>
-			</div>
-		</motion.div>
-	);
+function ProjectsCard({ title, desc, icon, techStack, link }) {
+  const router = useRouter();
+  return (
+    <div className={styles.card}>
+      <div className={styles.front}>
+        <h3 className={styles.title}>{title}</h3>
+        <Icon id={icon} size={32} color="#333" />
+      </div>
+      <div className={styles.card__content}>
+        <div className={styles.container}>
+          <div className={styles.titleContainer}>
+            <h3 className={styles.title}>{title}</h3>
+            <Icon id={icon} size={32} color="#333" />
+          </div>
+          <p className={styles.desc}>{desc}</p>
+          <div className={styles.icons}>
+            {techStack.map((tech) => (
+              <Icon key={tech} id={tech} size={18} />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => router.push(link)}
+            className={styles.btn}
+          >
+            Learn More{" "}
+            <span className={styles.arrow}>
+              <Arrow size={20} />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ProjectsCard;

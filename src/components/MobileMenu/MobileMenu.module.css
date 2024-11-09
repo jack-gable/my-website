@@ -1,128 +1,129 @@
 .wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: transparent;
-	display: flex;
-	justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
 }
 
 .backdrop {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: var(--color-backdrop);
-	opacity: 0.8;
-	animation: fadeIn 500ms;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-backdrop);
+  opacity: 0.8;
+  animation: fadeIn 500ms;
 }
 
 .content {
-	--overfill: 16px;
-	position: relative;
-	background: linear-gradient(
-		to right,
-		var(--color-backdrop),
-		var(--color-backdrop-highlight)
-	);
-	width: calc(450px + var(--overfill));
-	height: 100%;
-	margin-right: calc(var(--overfill) * -1);
-	padding: 24px 32px;
+  --overfill: 16px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    var(--color-backdrop),
+    var(--color-backdrop-highlight)
+  );
+  width: calc(450px + var(--overfill));
+  height: 100%;
+  margin-right: calc(var(--overfill) * -1);
+  padding: 24px 32px;
 }
 
 .innerWrapper {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	animation: fadeIn 600ms both;
-	animation-delay: 400ms;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: fadeIn 600ms both;
+  animation-delay: 400ms;
 }
 
 .closeBtn {
-	background-color: none;
-	border: none;
-	position: absolute;
-	right: 24px;
-	padding: 16px;
+  background-color: none;
+  border: none;
+  position: absolute;
+  right: 24px;
+  padding: 16px;
 }
 
 .menuBtn {
-	padding: 16px;
+  padding: 16px;
 }
 
 .nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
 }
 
 .navList {
-	display: flex;
-	gap: 32px;
-	padding: 0;
-	list-style-type: none;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .listItem {
-	position: relative;
+  position: relative;
 }
 
 .navLink {
-	border: none;
-	background: transparent;
-	cursor: pointer;
-	border-radius: 12px;
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	position: relative;
-	padding: 10px 16px;
-	text-decoration: none;
-	color: var(--color-text);
-	font-weight: 600;
-	font-size: 1.25rem;
-	transition: background 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: background 200ms;
 }
 
 .navLink:hover,
 .navLink:focus {
-	background: var(--color-decorative-500);
+  background: var(--color-decorative-500);
 }
 
 @media (min-width: 35rem) {
-	.menuBtn {
-		display: none;
-	}
+  .menuBtn {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.content {
-		animation: slideIn 500ms both cubic-bezier(0, 0.6, 0.32, 1.06);
-		animation-delay: 200ms;
-	}
+  .content {
+    animation: slideIn 500ms both cubic-bezier(0, 0.6, 0.32, 1.06);
+    animation-delay: 200ms;
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-	from {
-		transform: translateX(100%);
-	}
-	to {
-		transform: translateX(0%);
-	}
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

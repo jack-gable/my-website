@@ -7,10 +7,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3rem;
 }
 
-.projectsContainer {
+.aboutContainer {
   max-width: 36rem;
 }
 
@@ -20,17 +19,18 @@
   font-weight: 600;
 }
 
-.projectText {
+.aboutText {
   font-size: 1rem;
   padding-top: 1rem;
 }
 
-.projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4.5rem;
+.techContainer {
+  padding: 3rem 0;
+}
+
+.subtitle {
+  text-transform: capitalize;
+  padding-bottom: 1.2rem;
 }
 
 @media (min-width: 640px) {
@@ -39,17 +39,22 @@
     padding-right: 2.5rem;
   }
 
-  .projectsContainer {
+  .aboutContainer {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 
-  .projectText {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .aboutText {
     width: 100%;
     font-size: 1.125rem;
   }
 
-  .projects {
-    gap: 3rem;
+  .techContainer {
+    padding: 2rem 0;
   }
 }

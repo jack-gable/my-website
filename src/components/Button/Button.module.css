@@ -1,63 +1,129 @@
 .btn {
-	position: relative;
-	display: inline-block;
-	height: 3rem;
-	width: 10rem;
-	overflow: hidden;
-	border-radius: 0.5rem;
-	padding: 1px;
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+  width: 10rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 1px;
 }
 
 .btn:focus {
-	outline: none;
+  outline: none;
 }
 
 .textWrapper {
-	position: absolute;
-	inset: -1000%;
-	animation: spin 2s linear infinite;
-	background-image: conic-gradient(
-		from 90deg at 50% 50%,
-		#e2cbff 0%,
-		#393bb2 50%,
-		#e2cbff 100%
-	);
+  position: absolute;
+  inset: -1000%;
+  background-image: conic-gradient(
+    from 90deg at 50% 50%,
+    #e2cbff 0%,
+    #393bb2 50%,
+    #e2cbff 100%
+  );
 }
 
 .text {
-	display: inline-flex;
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
-	border-radius: 0.5rem;
-	background-color: var(--color-gray-0);
-	padding: 0.75rem 0.25rem;
-	font-size: 0.875rem;
-	line-height: 1.25rem;
-	font-weight: 500;
-	color: var(--color-text);
-	backdrop-filter: blur(64px);
-	gap: 0.5rem;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-gray-0);
+  padding: 0.75rem 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text);
+  backdrop-filter: blur(64px);
+  gap: 0.5rem;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .text:hover,
 .text:focus {
-	color: var(--color-primary-300);
+  background: var(--color-primary-500);
+  box-shadow: 0 0 30px 5px var(--color-primary-700);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.text:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  -o-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.text::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.text:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
 }
 
 @keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .textWrapper {
+    animation: spin 2s linear infinite;
+  }
 }
 
 @media (max-width: 35rem) {
-	.btn {
-		width: 100%;
-	}
+  .btn {
+    width: 100%;
+  }
 }
